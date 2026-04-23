@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photography — OBESECITY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-logo">OBESECITY</a>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="photography.html" class="active">Photography</a></li>
+    <li><a href="beats.html">Beats</a></li>
+    <li><a href="zines.html">Zines</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="app.html">App</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="studio.html" class="nav-studio">Studio</a></li>
+  </ul>
+</nav>
+<div class="hero hero-inner">
+  <div class="hero-bg" style="background-image:url('https://lh3.googleusercontent.com/jRmBgBvSF7YxXD3yAV0d6Ngl7AHJ9yqVh7LRbCG-j9xT3VuZMxRWAzCzY24x5jLhqdKEp3gSFGaOCrC5PJx1yiHBlb_1w-GVKQ=s0')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-sub">Visual Work</p>
+    <h1 class="hero-title">PHOTO<span class="red">GRAPHY</span></h1>
+    <p class="hero-desc">Street &middot; Portrait &middot; Documentary &middot; Film</p>
+  </div>
+</div>
+<div class="filter-bar">
+  <button class="filter-btn active">All</button>
+  <button class="filter-btn">Los Angeles</button>
+  <button class="filter-btn">New York</button>
+  <button class="filter-btn">Chicago</button>
+  <button class="filter-btn">Film</button>
+  <button class="filter-btn">Portrait</button>
+</div>
+<section class="series-section" style="background:#0a0a0a;">
+  <div class="section-header"><h2>LOS ANGELES</h2><div class="rule"></div></div>
+  <p class="series-desc">Street photography from LA. Shot on film and digital. Real moments, real people.</p>
+  <div class="photo-grid">
+    <div class="photo-item" style="background-image:url('https://lh3.googleusercontent.com/jRmBgBvSF7YxXD3yAV0d6Ngl7AHJ9yqVh7LRbCG-j9xT3VuZMxRWAzCzY24x5jLhqdKEp3gSFGaOCrC5PJx1yiHBlb_1w-GVKQ=s0')"></div>
+    <div class="photo-item" style="background-image:url('https://lh3.googleusercontent.com/2bHhFiuJoVIhCBiFDH4gvRmWiCpHGVBgTPZCzT4EGFzRv6H2GOJYSH1v1qzPbSFLX6Qz3VL-FQHyCqJHdJNdWHJmBQp3Ym74=s0')"></div>
+    <div class="photo-item" style="background:#1a1a1a;"></div>
+    <div class="photo-item" style="background:#111;"></div>
+    <div class="photo-item" style="background:#161616;"></div>
+    <div class="photo-item" style="background:#1c1c1c;"></div>
+  </div>
+</section>
+<section class="series-section" style="background:#111;">
+  <div class="section-header"><h2>NEW YORK</h2><div class="rule"></div></div>
+  <p class="series-desc">NYC dispatches. Energy, density, contrast.</p>
+  <div class="photo-grid">
+    <div class="photo-item" style="background:#1a1a1a;"></div>
+    <div class="photo-item" style="background:#161616;"></div>
+    <div class="photo-item" style="background:#1e1e1e;"></div>
+    <div class="photo-item" style="background:#131313;"></div>
+  </div>
+</section>
+<section class="series-section" style="background:#0a0a0a;">
+  <div class="section-header"><h2>CHICAGO</h2><div class="rule"></div></div>
+  <p class="series-desc">The third city. Architecture, neighborhoods, seasons.</p>
+  <div class="photo-grid">
+    <div class="photo-item" style="background:#181818;"></div>
+    <div class="photo-item" style="background:#141414;"></div>
+    <div class="photo-item" style="background:#1c1c1c;"></div>
+    <div class="photo-item" style="background:#111;"></div>
+  </div>
+</section>
+<section class="section" style="background:#111;text-align:center;">
+  <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3rem;text-transform:uppercase;margin-bottom:1rem;">PRINTS AVAILABLE</h2>
+  <p style="color:#888;margin-bottom:2rem;">Selected photographs available as limited edition fine art prints.</p>
+  <a href="zines.html" class="btn-primary">SHOP PRINTS</a>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
+    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
+    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',function(){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active');});});
+</script>
+</body>
+</html>
