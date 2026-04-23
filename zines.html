@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zines — OBESECITY</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav scrolled" id="nav">
+  <a href="index.html" class="nav-logo">OBESECITY</a>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="photography.html">Photography</a></li>
+    <li><a href="beats.html">Beats</a></li>
+    <li><a href="zines.html" class="active">Zines</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="app.html">App</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="studio.html" class="nav-studio">Studio</a></li>
+  </ul>
+</nav>
+<div class="page-hero">
+  <p class="about-eyebrow">Self-Published</p>
+  <h1>ZINES &amp; <span class="red">PRINTS</span></h1>
+  <p>Three cities. Three volumes. All film.</p>
+</div>
+<div class="zines-grid">
+  <div class="zine-card">
+    <div class="zine-cover" style="background-image:url('https://lh3.googleusercontent.com/pw/AP1GczOPk8tz3fRFwGJV-GkVWPJOSJeM-E3DnvsMc1xMXkFvfCkLjaxAmwnxifDlnB8zAqV1LLLt7VQwSMkjOVdBxOLr7g3HOw=s0')"></div>
+    <div class="zine-body">
+      <p class="zine-vol">Volume 01</p>
+      <h2 class="zine-title">LOS ANGELES</h2>
+      <p class="zine-desc">The first volume. Street photography from LA — film, grain, real life on the street.</p>
+      <a href="#" class="btn-primary">BUY NOW</a>
+    </div>
+  </div>
+  <div class="zine-card">
+    <div class="zine-cover" style="background:#1a1a1a;height:420px;"></div>
+    <div class="zine-body">
+      <p class="zine-vol">Volume 02</p>
+      <h2 class="zine-title">NEW YORK</h2>
+      <p class="zine-desc">Second installment. NYC energy — the city that never sleeps, caught on 35mm.</p>
+      <a href="#" class="btn-primary">BUY NOW</a>
+    </div>
+  </div>
+  <div class="zine-card">
+    <div class="zine-cover" style="background:#161616;height:420px;"></div>
+    <div class="zine-body">
+      <p class="zine-vol">Volume 03</p>
+      <h2 class="zine-title">CHICAGO</h2>
+      <p class="zine-desc">Third volume. The Windy City in winter and summer. Architecture and people.</p>
+      <a href="#" class="btn-primary">BUY NOW</a>
+    </div>
+  </div>
+</div>
+<section class="section" style="background:#111;">
+  <div class="section-header"><h2>FINE ART PRINTS</h2><div class="rule"></div></div>
+  <p style="color:#888;max-width:550px;margin-bottom:2rem;line-height:1.75;">Select images from the zine series are available as archival fine art prints. Each print is numbered and signed. Limited editions.</p>
+  <a href="contact.html" class="btn-primary">INQUIRE ABOUT PRINTS</a>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
+    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
+    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+  </div>
+</footer>
+<script>function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}</script>
+</body>
+</html>
