@@ -6,6 +6,21 @@
 <title>Beats — OBESECITY</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.player-section{padding:5rem 2rem;border-bottom:1px solid #1a1a1a;}
+.player-section:last-of-type{border-bottom:none;}
+.player-header{display:grid;grid-template-columns:80px 1fr auto;align-items:center;gap:2rem;margin-bottom:2rem;}
+.player-num{font-size:3rem;font-weight:900;color:#d60000;letter-spacing:-.02em;}
+.player-title{font-size:1.8rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin:0 0 .3rem;}
+.player-meta{font-size:.8rem;letter-spacing:.1em;color:#888;margin:0 0 .3rem;}
+.player-tags{font-size:.75rem;color:#555;letter-spacing:.05em;}
+.player-embed{width:100%;max-width:700px;}
+.player-embed iframe{width:100%;border:0;border-radius:0;}
+@media(max-width:768px){
+  .player-header{grid-template-columns:50px 1fr;gap:1rem;}
+  .player-embed{max-width:100%;}
+}
+</style>
 </head>
 <body>
 <div class="page-transition-overlay"></div>
@@ -31,68 +46,89 @@
   <div class="page-hero-label">LATEST RELEASE</div>
   <h1 class="page-hero-title">ESCAPE<br><span class="red">HATCH</span></h1>
   <p class="page-hero-meta">2025 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; Jazz-Hop / Soul / Lo-Fi</p>
-  <div class="page-hero-actions">
-    <a href="https://obesecity.bandcamp.com/album/escape-hatch" target="_blank" class="btn-red btn-magnetic">STREAM NOW</a>
-    <a href="https://obesecity.bandcamp.com/music" target="_blank" class="btn-outline btn-magnetic">FULL DISCOGRAPHY</a>
-  </div>
 </section>
 
 <div class="ticker-wrap">
   <div class="ticker-strip">
-    <span>BEATS &nbsp;&#8212;&nbsp; INSTRUMENTALS &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; SYNC LICENSING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; BEAT TAPES &nbsp;&#8212;&nbsp; INDEPENDANT &nbsp;&#8212;&nbsp; </span>
-    <span>BEATS &nbsp;&#8212;&nbsp; INSTRUMENTALS &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; SYNC LICENSING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; BEAT TAPES &nbsp;&#8212;&nbsp; INDEPENDANT &nbsp;&#8212;&nbsp; </span>
+    <span>BEATS &nbsp;&#8212;&nbsp; INSTRUMENTALS &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; SYNC LICENSING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; BEAT TAPES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+    <span>BEATS &nbsp;&#8212;&nbsp; INSTRUMENTALS &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; SYNC LICENSING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; BEAT TAPES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
   </div>
 </div>
 
-<section class="section discography reveal-up">
-  <h2 class="section-title">DISCOGRAPHY</h2>
-  <div class="red-rule"></div>
-  <div class="album-grid">
-
-    <div class="album-row reveal-left">
-      <div class="album-num red">001</div>
-      <div class="album-info">
-        <h3 class="album-title">ESCAPE HATCH</h3>
-        <p class="album-meta">June 2025 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 10 tracks</p>
-        <p class="album-tags">jazzhop &middot; soul &middot; chillhop &middot; lo-fi</p>
-      </div>
-      <a href="https://obesecity.bandcamp.com/album/escape-hatch" target="_blank" class="album-link red">Listen</a>
-    </div>
-
-    <div class="album-row reveal-left">
-      <div class="album-num red">002</div>
-      <div class="album-info">
-        <h3 class="album-title">BAGGAGE CLAIM</h3>
-        <p class="album-meta">March 2016 &nbsp;&middot;&nbsp; Hip-Hop / Rap &nbsp;&middot;&nbsp; 9 tracks</p>
-        <p class="album-tags">w/ 2Mex &middot; features &middot; Los Angeles</p>
-      </div>
-      <a href="https://obesecity.bandcamp.com/album/baggage-claim" target="_blank" class="album-link red">Listen</a>
-    </div>
-
-    <div class="album-row reveal-left">
-      <div class="album-num red">003</div>
-      <div class="album-info">
-        <h3 class="album-title">NULL</h3>
-        <p class="album-meta">April 2015 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 19 tracks</p>
-        <p class="album-tags">hip-hop &middot; instrumental &middot; Los Angeles</p>
-      </div>
-      <a href="https://obesecity.bandcamp.com/album/null" target="_blank" class="album-link red">Listen</a>
-    </div>
-
-    <div class="album-row reveal-left">
-      <div class="album-num red">004</div>
-      <div class="album-info">
-        <h3 class="album-title">ON THE ROCKS</h3>
-        <p class="album-meta">February 2015 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 20 tracks</p>
-        <p class="album-tags">hip-hop/rap &middot; debut &middot; Los Angeles</p>
-      </div>
-      <a href="https://obesecity.bandcamp.com/album/on-the-rocks" target="_blank" class="album-link red">Listen</a>
-    </div>
-
-  </div>
+<section class="section" style="padding:4rem 2rem 2rem;">
+  <h2 class="section-title reveal-up">DISCOGRAPHY</h2>
+  <div class="red-rule reveal-up"></div>
 </section>
 
-<section class="section sync-section reveal-up">
+<div class="player-section reveal-up">
+  <div class="player-header">
+    <div class="player-num">001</div>
+    <div>
+      <h3 class="player-title">Escape Hatch</h3>
+      <p class="player-meta">June 2025 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 10 tracks</p>
+      <p class="player-tags">jazzhop &middot; soul &middot; chillhop &middot; lo-fi</p>
+    </div>
+  </div>
+  <div class="player-embed">
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbedPlayer/album=1113911785/size=large/bgcol=111111/linkcol=de0000/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/escape-hatch">Escape Hatch by Obesecity</a></iframe>
+  </div>
+  <div class="player-embed" style="margin-top:1rem;">
+    <iframe style="border: 0; width: 100%; height: 307px;" src="https://bandcamp.com/EmbedPlayer/album=1113911785/size=large/bgcol=111111/linkcol=de0000/tracklist=true/artwork=none/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/escape-hatch">Escape Hatch by Obesecity</a></iframe>
+  </div>
+</div>
+
+<div class="player-section reveal-up">
+  <div class="player-header">
+    <div class="player-num">002</div>
+    <div>
+      <h3 class="player-title">Baggage Claim</h3>
+      <p class="player-meta">March 2016 &nbsp;&middot;&nbsp; Hip-Hop / Rap &nbsp;&middot;&nbsp; 9 tracks</p>
+      <p class="player-tags">w/ 2Mex &middot; features &middot; Los Angeles</p>
+    </div>
+  </div>
+  <div class="player-embed">
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbedPlayer/album=3980676725/size=large/bgcol=111111/linkcol=de0000/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/baggage-claim">Baggage Claim by OBESECITY</a></iframe>
+  </div>
+  <div class="player-embed" style="margin-top:1rem;">
+    <iframe style="border: 0; width: 100%; height: 270px;" src="https://bandcamp.com/EmbedPlayer/album=3980676725/size=large/bgcol=111111/linkcol=de0000/tracklist=true/artwork=none/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/baggage-claim">Baggage Claim by OBESECITY</a></iframe>
+  </div>
+</div>
+
+<div class="player-section reveal-up">
+  <div class="player-header">
+    <div class="player-num">003</div>
+    <div>
+      <h3 class="player-title">NULL</h3>
+      <p class="player-meta">April 2015 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 19 tracks</p>
+      <p class="player-tags">hip-hop &middot; instrumental &middot; Los Angeles</p>
+    </div>
+  </div>
+  <div class="player-embed">
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbedPlayer/album=3110779241/size=large/bgcol=111111/linkcol=de0000/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/null">NULL by OBESECITY</a></iframe>
+  </div>
+  <div class="player-embed" style="margin-top:1rem;">
+    <iframe style="border: 0; width: 100%; height: 504px;" src="https://bandcamp.com/EmbedPlayer/album=3110779241/size=large/bgcol=111111/linkcol=de0000/tracklist=true/artwork=none/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/null">NULL by OBESECITY</a></iframe>
+  </div>
+</div>
+
+<div class="player-section reveal-up">
+  <div class="player-header">
+    <div class="player-num">004</div>
+    <div>
+      <h3 class="player-title">On The Rocks</h3>
+      <p class="player-meta">February 2015 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 20 tracks &nbsp;&middot;&nbsp; Debut</p>
+      <p class="player-tags">hip-hop/rap &middot; debut &middot; Los Angeles</p>
+    </div>
+  </div>
+  <div class="player-embed">
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbedPlayer/album=4024137140/size=large/bgcol=111111/linkcol=de0000/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/on-the-rocks">On The Rocks by OBESECITY</a></iframe>
+  </div>
+  <div class="player-embed" style="margin-top:1rem;">
+    <iframe style="border: 0; width: 100%; height: 530px;" src="https://bandcamp.com/EmbedPlayer/album=4024137140/size=large/bgcol=111111/linkcol=de0000/tracklist=true/artwork=none/transparent=true/" seamless><a href="https://obesecity.bandcamp.com/album/on-the-rocks">On The Rocks by OBESECITY</a></iframe>
+  </div>
+</div>
+
+<section class="sync-section reveal-up">
   <h2 class="section-title">SYNC LICENSING</h2>
   <div class="red-rule"></div>
   <p class="sync-body">Music available for licensing in film, TV, advertising, and digital media. All beats are original compositions, fully cleared for sync use.</p>
@@ -116,52 +152,44 @@
 
 <script>
 (function(){
-  // Cursor
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
-  if (window.matchMedia('(pointer:fine)').matches) {
-    document.addEventListener('mousemove', e => {
-      dot.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
-      ring.style.transform = 'translate(' + (e.clientX-12) + 'px,' + (e.clientY-12) + 'px)';
+  const dot=document.querySelector('.cursor-dot');
+  const ring=document.querySelector('.cursor-ring');
+  if(window.matchMedia('(pointer:fine)').matches){
+    document.addEventListener('mousemove',e=>{
+      dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
+      ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';
     });
-    document.querySelectorAll('a,button').forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));
+      el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));
     });
   }
-  // Nav scroll
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
-  // Menu overlay
-  document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
-  document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
-  // Scroll reveals
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal-up, .reveal-left').forEach(el => observer.observe(el));
-  // Page transition
-  const overlay = document.querySelector('.page-transition-overlay');
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.startsWith('#')) {
-      link.addEventListener('click', e => {
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);});
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));
+  document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));
+  const obs=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});
+  },{threshold:0.08});
+  document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));
+  const overlay=document.querySelector('.page-transition-overlay');
+  document.querySelectorAll('a[href]').forEach(link=>{
+    const href=link.getAttribute('href');
+    if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){
+      link.addEventListener('click',e=>{
         e.preventDefault();
         overlay.classList.add('active');
-        setTimeout(() => { window.location.href = href; }, 400);
+        setTimeout(()=>{window.location.href=href;},400);
       });
     }
   });
-  setTimeout(() => overlay.classList.remove('active'), 100);
-  // Magnetic buttons
-  document.querySelectorAll('.btn-magnetic').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-      const r = btn.getBoundingClientRect();
-      const x = e.clientX - r.left - r.width/2;
-      const y = e.clientY - r.top - r.height/2;
-      btn.style.transform = 'translate(' + x*0.25 + 'px,' + y*0.25 + 'px)';
+  setTimeout(()=>overlay.classList.remove('active'),100);
+  document.querySelectorAll('.btn-magnetic').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{
+      const r=btn.getBoundingClientRect();
+      btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';
     });
-    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
   });
 })();
 </script>
