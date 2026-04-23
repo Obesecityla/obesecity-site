@@ -3,71 +3,111 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zines — OBESECITY</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<title>Zines &amp; Prints — OBESECITY</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav scrolled" id="nav">
+<div class="page-transition-overlay"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">OBESECITY</a>
-  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="beats.html">Beats</a></li>
-    <li><a href="zines.html" class="active">Zines</a></li>
-    <li><a href="book.html">Book</a></li>
-    <li><a href="app.html">App</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="studio.html" class="nav-studio">Studio</a></li>
-  </ul>
+  <button class="nav-menu-btn" id="menuBtn">menu</button>
 </nav>
-<div class="page-hero">
-  <p class="about-eyebrow">Self-Published</p>
-  <h1>ZINES &amp; <span class="red">PRINTS</span></h1>
-  <p>Three cities. Three volumes. All film.</p>
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" id="navClose">close</button>
+  <ul class="nav-overlay-links">
+    <li><a href="photography.html" class="nav-overlay-link">Photography</a></li>
+    <li><a href="beats.html" class="nav-overlay-link">Beats</a></li>
+    <li><a href="zines.html" class="nav-overlay-link">Zines</a></li>
+    <li><a href="book.html" class="nav-overlay-link">Book</a></li>
+    <li><a href="app.html" class="nav-overlay-link">App</a></li>
+    <li><a href="contact.html" class="nav-overlay-link">Contact</a></li>
+  </ul>
 </div>
-<div class="zines-grid">
-  <div class="zine-card">
-    <div class="zine-cover" style="background-image:url('https://lh3.googleusercontent.com/pw/AP1GczOPk8tz3fRFwGJV-GkVWPJOSJeM-E3DnvsMc1xMXkFvfCkLjaxAmwnxifDlnB8zAqV1LLLt7VQwSMkjOVdBxOLr7g3HOw=s0')"></div>
-    <div class="zine-body">
-      <p class="zine-vol">Volume 01</p>
-      <h2 class="zine-title">LOS ANGELES</h2>
-      <p class="zine-desc">The first volume. Street photography from LA — film, grain, real life on the street.</p>
-      <a href="#" class="btn-primary">BUY NOW</a>
-    </div>
+
+<section class="page-hero reveal-up">
+  <div class="page-hero-label">SELF-PUBLISHED</div>
+  <h1 class="page-hero-title">ZINES &amp;<br><span class="red">PRINTS</span></h1>
+  <p class="page-hero-meta">Photography Zines &nbsp;&middot;&nbsp; Art Prints &nbsp;&middot;&nbsp; Limited Editions</p>
+  <div class="page-hero-actions">
+    <a href="https://obesecity.bandcamp.com" target="_blank" class="btn-red btn-magnetic">SHOP NOW</a>
   </div>
-  <div class="zine-card">
-    <div class="zine-cover" style="background:#1a1a1a;height:420px;"></div>
-    <div class="zine-body">
-      <p class="zine-vol">Volume 02</p>
-      <h2 class="zine-title">NEW YORK</h2>
-      <p class="zine-desc">Second installment. NYC energy — the city that never sleeps, caught on 35mm.</p>
-      <a href="#" class="btn-primary">BUY NOW</a>
-    </div>
-  </div>
-  <div class="zine-card">
-    <div class="zine-cover" style="background:#161616;height:420px;"></div>
-    <div class="zine-body">
-      <p class="zine-vol">Volume 03</p>
-      <h2 class="zine-title">CHICAGO</h2>
-      <p class="zine-desc">Third volume. The Windy City in winter and summer. Architecture and people.</p>
-      <a href="#" class="btn-primary">BUY NOW</a>
-    </div>
-  </div>
-</div>
-<section class="section" style="background:#111;">
-  <div class="section-header"><h2>FINE ART PRINTS</h2><div class="rule"></div></div>
-  <p style="color:#888;max-width:550px;margin-bottom:2rem;line-height:1.75;">Select images from the zine series are available as archival fine art prints. Each print is numbered and signed. Limited editions.</p>
-  <a href="contact.html" class="btn-primary">INQUIRE ABOUT PRINTS</a>
 </section>
-<footer class="footer">
+
+<div class="ticker-wrap">
+  <div class="ticker-strip">
+    <span>SELF-PUBLISHED &nbsp;&#8212;&nbsp; LIMITED EDITION &nbsp;&#8212;&nbsp; ZINES &nbsp;&#8212;&nbsp; ART PRINTS &nbsp;&#8212;&nbsp; RISOGRAPH &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+    <span>SELF-PUBLISHED &nbsp;&#8212;&nbsp; LIMITED EDITION &nbsp;&#8212;&nbsp; ZINES &nbsp;&#8212;&nbsp; ART PRINTS &nbsp;&#8212;&nbsp; RISOGRAPH &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+  </div>
+</div>
+
+<section class="section reveal-up" style="padding:4rem 2rem;">
+  <h2 class="section-title">THE CATALOG</h2>
+  <div class="red-rule"></div>
+  <div class="medium-index">
+    <div class="medium-row reveal-left">
+      <span class="medium-num red">001</span>
+      <span class="medium-title">STREET STUDIES VOL. 1</span>
+      <span class="medium-tag">Photography Zine</span>
+      <a href="contact.html" class="album-link red">Inquire</a>
+    </div>
+    <div class="medium-row reveal-left">
+      <span class="medium-num red">002</span>
+      <span class="medium-title">CITY PORTRAITS</span>
+      <span class="medium-tag">Photo Zine</span>
+      <a href="contact.html" class="album-link red">Inquire</a>
+    </div>
+    <div class="medium-row reveal-left">
+      <span class="medium-num red">003</span>
+      <span class="medium-title">LA GRIDS</span>
+      <span class="medium-tag">Art Print Series</span>
+      <a href="contact.html" class="album-link red">Inquire</a>
+    </div>
+  </div>
+</section>
+
+<section class="sync-section reveal-up">
+  <h2 class="section-title">CUSTOM ORDERS</h2>
+  <div class="red-rule"></div>
+  <p class="sync-body">All zines are self-published in limited runs. Prints are available as open editions and limited editions. For wholesale or custom orders, get in touch.</p>
+  <a href="contact.html" class="btn-red btn-magnetic">GET IN TOUCH</a>
+</section>
+
+<footer class="footer reveal-up">
   <div class="footer-inner">
-    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
-    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
-    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+    <div class="footer-left">
+      <div class="footer-logo">OBESECITY</div>
+      <p>Los Angeles - Creative Studio</p>
+      <p class="footer-copy">2025 Paul Chavez ObeseCity</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="contact.html">CONTACT</a>
+      <a href="studio.html">STUDIO</a>
+      <a href="mailto:obesecity.la@gmail.com">OBESECITY.LA@GMAIL.COM</a>
+    </nav>
   </div>
 </footer>
-<script>function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}</script>
+
+<script>
+(function(){
+  const dot=document.querySelector('.cursor-dot');const ring=document.querySelector('.cursor-ring');
+  if(window.matchMedia('(pointer:fine)').matches){
+    document.addEventListener('mousemove',e=>{dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';});
+    document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));});
+  }
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);});
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));
+  document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));
+  const overlay=document.querySelector('.page-transition-overlay');
+  document.querySelectorAll('a[href]').forEach(link=>{const href=link.getAttribute('href');if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){link.addEventListener('click',e=>{e.preventDefault();overlay.classList.add('active');setTimeout(()=>{window.location.href=href;},400);});}});
+  setTimeout(()=>overlay.classList.remove('active'),100);
+  document.querySelectorAll('.btn-magnetic').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});
+})();
+</script>
 </body>
 </html>
