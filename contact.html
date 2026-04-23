@@ -4,56 +4,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — OBESECITY</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav scrolled" id="nav">
+<div class="page-transition-overlay"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">OBESECITY</a>
-  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="beats.html">Beats</a></li>
-    <li><a href="zines.html">Zines</a></li>
-    <li><a href="book.html">Book</a></li>
-    <li><a href="app.html">App</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-    <li><a href="studio.html" class="nav-studio">Studio</a></li>
-  </ul>
+  <button class="nav-menu-btn" id="menuBtn">menu</button>
 </nav>
-<div class="contact-section" style="padding-top:80px;">
-  <div class="contact-img" style="background-image:url('https://lh3.googleusercontent.com/jRmBgBvSF7YxXD3yAV0d6Ngl7AHJ9yqVh7LRbCG-j9xT3VuZMxRWAzCzY24x5jLhqdKEp3gSFGaOCrC5PJx1yiHBlb_1w-GVKQ=s0');min-height:60vh;"></div>
-  <div class="contact-content">
-    <p class="about-eyebrow">Get In Touch</p>
-    <h1 class="contact-headline">LET'S MAKE SOMETHING <span class="red">REAL.</span></h1>
-    <p style="color:#888;margin-bottom:2rem;max-width:400px;line-height:1.75;">Photography commissions, beat licensing, wholesale orders, zine distribution, press inquiries, or just to say what's up.</p>
-    <a href="mailto:ObeseCity.LA@gmail.com" class="contact-email">ObeseCity.LA@gmail.com</a>
-    <div class="contact-socials">
-      <a href="#" class="social-link">Instagram</a>
-      <a href="#" class="social-link">Bandcamp</a>
-      <a href="#" class="social-link">SoundCloud</a>
-      <a href="#" class="social-link">Spotify</a>
-    </div>
-    <div style="margin-top:3rem;border-top:1px solid #1e1e1e;padding-top:2rem;">
-      <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;text-transform:uppercase;margin-bottom:1.5rem;">WHAT I'M AVAILABLE FOR</h3>
-      <div style="display:flex;flex-direction:column;gap:0.75rem;">
-        <div style="display:flex;align-items:center;gap:1rem;color:#888;font-size:0.9rem;"><span style="color:#d62828;font-weight:700;">&#9472;</span>Photography &mdash; editorial, commercial, documentary</div>
-        <div style="display:flex;align-items:center;gap:1rem;color:#888;font-size:0.9rem;"><span style="color:#d62828;font-weight:700;">&#9472;</span>Beat licensing &mdash; sync, TV, film, advertising</div>
-        <div style="display:flex;align-items:center;gap:1rem;color:#888;font-size:0.9rem;"><span style="color:#d62828;font-weight:700;">&#9472;</span>Zine &amp; print orders</div>
-        <div style="display:flex;align-items:center;gap:1rem;color:#888;font-size:0.9rem;"><span style="color:#d62828;font-weight:700;">&#9472;</span>Book wholesale inquiries</div>
-        <div style="display:flex;align-items:center;gap:1rem;color:#888;font-size:0.9rem;"><span style="color:#d62828;font-weight:700;">&#9472;</span>Collaborations</div>
-      </div>
-    </div>
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" id="navClose">close</button>
+  <ul class="nav-overlay-links">
+    <li><a href="photography.html" class="nav-overlay-link">Photography</a></li>
+    <li><a href="beats.html" class="nav-overlay-link">Beats</a></li>
+    <li><a href="zines.html" class="nav-overlay-link">Zines</a></li>
+    <li><a href="book.html" class="nav-overlay-link">Book</a></li>
+    <li><a href="app.html" class="nav-overlay-link">App</a></li>
+    <li><a href="contact.html" class="nav-overlay-link">Contact</a></li>
+  </ul>
+</div>
+
+<section class="page-hero reveal-up">
+  <div class="page-hero-label">GET IN TOUCH</div>
+  <h1 class="page-hero-title">CON<br><span class="red">TACT</span></h1>
+  <p class="page-hero-meta">Bookings &nbsp;&middot;&nbsp; Licensing &nbsp;&middot;&nbsp; Collaborations &nbsp;&middot;&nbsp; General</p>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-strip ticker-rev">
+    <span>LICENSING &nbsp;&#8212;&nbsp; BOOKINGS &nbsp;&#8212;&nbsp; COLLABORATIONS &nbsp;&#8212;&nbsp; PRESS &nbsp;&#8212;&nbsp; GET IN TOUCH &nbsp;&#8212;&nbsp; </span>
+    <span>LICENSING &nbsp;&#8212;&nbsp; BOOKINGS &nbsp;&#8212;&nbsp; COLLABORATIONS &nbsp;&#8212;&nbsp; PRESS &nbsp;&#8212;&nbsp; GET IN TOUCH &nbsp;&#8212;&nbsp; </span>
   </div>
 </div>
-<footer class="footer">
+
+<section class="contact-section reveal-up">
+  <h2 class="section-title">SEND A MESSAGE</h2>
+  <div class="red-rule"></div>
+  <div class="contact-form">
+    <div class="form-field">
+      <label>YOUR NAME</label>
+      <input type="text" placeholder="Name">
+    </div>
+    <div class="form-field">
+      <label>EMAIL</label>
+      <input type="email" placeholder="email@example.com">
+    </div>
+    <div class="form-field">
+      <label>SUBJECT</label>
+      <select>
+        <option>General Inquiry</option>
+        <option>Sync Licensing</option>
+        <option>Photography Booking</option>
+        <option>Zines / Prints</option>
+        <option>Collaboration</option>
+        <option>Press</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label>MESSAGE</label>
+      <textarea placeholder="Your message..."></textarea>
+    </div>
+    <a href="mailto:obesecity.la@gmail.com" class="btn-red btn-magnetic">SEND TO OBESECITY.LA@GMAIL.COM</a>
+  </div>
+</section>
+
+<footer class="footer reveal-up">
   <div class="footer-inner">
-    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
-    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
-    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+    <div class="footer-left">
+      <div class="footer-logo">OBESECITY</div>
+      <p>Los Angeles - Creative Studio</p>
+      <p class="footer-copy">2025 Paul Chavez ObeseCity</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="contact.html">CONTACT</a>
+      <a href="studio.html">STUDIO</a>
+      <a href="mailto:obesecity.la@gmail.com">OBESECITY.LA@GMAIL.COM</a>
+    </nav>
   </div>
 </footer>
-<script>function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}</script>
+
+<script>
+(function(){const dot=document.querySelector('.cursor-dot');const ring=document.querySelector('.cursor-ring');if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));});}const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);});document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});},{threshold:0.12});document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));const overlay=document.querySelector('.page-transition-overlay');document.querySelectorAll('a[href]').forEach(link=>{const href=link.getAttribute('href');if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){link.addEventListener('click',e=>{e.preventDefault();overlay.classList.add('active');setTimeout(()=>{window.location.href=href;},400);});}});setTimeout(()=>overlay.classList.remove('active'),100);document.querySelectorAll('.btn-magnetic').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});})();
+</script>
 </body>
 </html>
