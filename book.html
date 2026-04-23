@@ -3,63 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For The Children — OBESECITY</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<title>Book — OBESECITY</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav scrolled" id="nav">
+<div class="page-transition-overlay"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">OBESECITY</a>
-  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="beats.html">Beats</a></li>
-    <li><a href="zines.html">Zines</a></li>
-    <li><a href="book.html" class="active">Book</a></li>
-    <li><a href="app.html">App</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="studio.html" class="nav-studio">Studio</a></li>
-  </ul>
+  <button class="nav-menu-btn" id="menuBtn">menu</button>
 </nav>
-<div class="page-hero">
-  <p class="about-eyebrow">Children's Picture Book</p>
-  <h1>FOR THE <span class="red">CHILDREN</span></h1>
-  <p>A picture book for kids — and the kids at heart.</p>
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" id="navClose">close</button>
+  <ul class="nav-overlay-links">
+    <li><a href="photography.html" class="nav-overlay-link">Photography</a></li>
+    <li><a href="beats.html" class="nav-overlay-link">Beats</a></li>
+    <li><a href="zines.html" class="nav-overlay-link">Zines</a></li>
+    <li><a href="book.html" class="nav-overlay-link">Book</a></li>
+    <li><a href="app.html" class="nav-overlay-link">App</a></li>
+    <li><a href="contact.html" class="nav-overlay-link">Contact</a></li>
+  </ul>
 </div>
-<div class="book-content">
-  <div class="book-cover">
-    <div class="book-cover-inner">
-      <div class="book-cover-title" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.5rem;text-transform:uppercase;line-height:1;">FOR THE CHILDREN</div>
-      <div class="book-cover-sub" style="font-size:0.85rem;color:#888;margin-top:1rem;letter-spacing:0.1em;">By Paul Chavez</div>
-    </div>
+
+<section class="page-hero reveal-up">
+  <div class="page-hero-label">FOR THE CHILDREN</div>
+  <h1 class="page-hero-title">KIDS<br><span class="red">BOOK</span></h1>
+  <p class="page-hero-meta">Children's Picture Book &nbsp;&middot;&nbsp; Self-Published &nbsp;&middot;&nbsp; Los Angeles</p>
+  <div class="page-hero-actions">
+    <a href="contact.html" class="btn-red btn-magnetic">READ MORE</a>
   </div>
-  <div class="book-info">
-    <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3rem;text-transform:uppercase;margin-bottom:1rem;">FOR THE <span class="red">CHILDREN</span></h2>
-    <p style="color:#aaa;line-height:1.75;margin-bottom:1.5rem;">A children's picture book created with the same visual sensibility as the zine series — raw, honest, and made with love. A story about community, creativity, and seeing the world through curious eyes.</p>
-    <p style="color:#aaa;line-height:1.75;margin-bottom:2rem;">Self-published. Every copy is made with intention.</p>
-    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-      <a href="#" class="btn-primary">BUY NOW</a>
-      <a href="contact.html" class="btn-outline">WHOLESALE INQUIRIES</a>
-    </div>
-    <div style="margin-top:3rem;border-top:1px solid #1e1e1e;padding-top:2rem;">
-      <h3 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.5rem;text-transform:uppercase;margin-bottom:1rem;">DETAILS</h3>
-      <div class="credits-grid">
-        <div class="credit-item"><div class="credit-label">Author</div><div class="credit-value">Paul Chavez</div></div>
-        <div class="credit-item"><div class="credit-label">Format</div><div class="credit-value">Hardcover / Softcover</div></div>
-        <div class="credit-item"><div class="credit-label">Published</div><div class="credit-value">Self-Published</div></div>
-        <div class="credit-item"><div class="credit-label">For</div><div class="credit-value">Ages 3-8</div></div>
-      </div>
-    </div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-strip">
+    <span>FOR THE CHILDREN &nbsp;&#8212;&nbsp; KIDS PICTURE BOOK &nbsp;&#8212;&nbsp; SELF-PUBLISHED &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+    <span>FOR THE CHILDREN &nbsp;&#8212;&nbsp; KIDS PICTURE BOOK &nbsp;&#8212;&nbsp; SELF-PUBLISHED &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
   </div>
 </div>
-<footer class="footer">
+
+<section class="book-content reveal-up">
+  <div class="book-spread">
+    <div class="book-image">COVER ART</div>
+    <div class="book-text">
+      <h3>FOR THE CHILDREN</h3>
+      <p>A self-published children's picture book from Los Angeles. Storytelling rooted in community, creativity, and the city.</p>
+      <a href="contact.html" class="btn-red btn-magnetic">INQUIRE</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer reveal-up">
   <div class="footer-inner">
-    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
-    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
-    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+    <div class="footer-left">
+      <div class="footer-logo">OBESECITY</div>
+      <p>Los Angeles - Creative Studio</p>
+      <p class="footer-copy">2025 Paul Chavez ObeseCity</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="contact.html">CONTACT</a>
+      <a href="studio.html">STUDIO</a>
+      <a href="mailto:obesecity.la@gmail.com">OBESECITY.LA@GMAIL.COM</a>
+    </nav>
   </div>
 </footer>
-<script>function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}</script>
+
+<script>
+(function(){const dot=document.querySelector('.cursor-dot');const ring=document.querySelector('.cursor-ring');if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));});}const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);});document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});},{threshold:0.12});document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));const overlay=document.querySelector('.page-transition-overlay');document.querySelectorAll('a[href]').forEach(link=>{const href=link.getAttribute('href');if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){link.addEventListener('click',e=>{e.preventDefault();overlay.classList.add('active');setTimeout(()=>{window.location.href=href;},400);});}});setTimeout(()=>overlay.classList.remove('active'),100);document.querySelectorAll('.btn-magnetic').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});})();
+</script>
 </body>
 </html>
