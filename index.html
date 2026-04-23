@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OBESECITY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">OBESECITY</a>
+  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="photography.html">Photography</a></li>
+    <li><a href="beats.html">Beats</a></li>
+    <li><a href="zines.html">Zines</a></li>
+    <li><a href="book.html">Book</a></li>
+    <li><a href="app.html">App</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="studio.html" class="nav-studio">Studio</a></li>
+  </ul>
+</nav>
+<section class="hero">
+  <div class="hero-bg" style="background-image:url('https://lh3.googleusercontent.com/jRmBgBvSF7YxXD3yAV0d6Ngl7AHJ9yqVh7LRbCG-j9xT3VuZMxRWAzCzY24x5jLhqdKEp3gSFGaOCrC5PJx1yiHBlb_1w-GVKQ=s0')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-sub">LOS ANGELES &middot; CREATIVE STUDIO</p>
+    <h1 class="hero-title">OBESE<span class="red">CITY</span></h1>
+    <p class="hero-desc">Photography &middot; Beats &middot; Zines &middot; Books &middot; Apps</p>
+    <a href="photography.html" class="btn-primary">VIEW THE WORK</a>
+  </div>
+</section>
+<section class="section work-grid">
+  <div class="section-header"><h2>THE WORK</h2><div class="rule"></div></div>
+  <div class="grid-5">
+    <a href="photography.html" class="work-tile">
+      <div class="tile-img" style="background-image:url('https://lh3.googleusercontent.com/jRmBgBvSF7YxXD3yAV0d6Ngl7AHJ9yqVh7LRbCG-j9xT3VuZMxRWAzCzY24x5jLhqdKEp3gSFGaOCrC5PJx1yiHBlb_1w-GVKQ=s0')"></div>
+      <div class="tile-info"><span class="tile-label">01</span><h3>Photography</h3><p>Street &middot; Portrait &middot; Documentary</p></div>
+    </a>
+    <a href="beats.html" class="work-tile">
+      <div class="tile-img" style="background-image:url('https://lh3.googleusercontent.com/2bHhFiuJoVIhCBiFDH4gvRmWiCpHGVBgTPZCzT4EGFzRv6H2GOJYSH1v1qzPbSFLX6Qz3VL-FQHyCqJHdJNdWHJmBQp3Ym74=s0')"></div>
+      <div class="tile-info"><span class="tile-label">02</span><h3>Beats</h3><p>Production &middot; Instrumentals &middot; Sync</p></div>
+    </a>
+    <a href="zines.html" class="work-tile">
+      <div class="tile-img tile-img-dark"></div>
+      <div class="tile-info"><span class="tile-label">03</span><h3>Zines</h3><p>Vol. 1 LA &middot; Vol. 2 NYC &middot; Vol. 3 Chicago</p></div>
+    </a>
+    <a href="book.html" class="work-tile">
+      <div class="tile-img tile-img-dark"></div>
+      <div class="tile-info"><span class="tile-label">04</span><h3>Book</h3><p>For The Children &middot; Kids Picture Book</p></div>
+    </a>
+    <a href="app.html" class="work-tile">
+      <div class="tile-img tile-img-dark"></div>
+      <div class="tile-info"><span class="tile-label">05</span><h3>App</h3><p>Mobile &middot; Independent Release</p></div>
+    </a>
+  </div>
+</section>
+<section class="about-strip">
+  <div class="about-content">
+    <p class="about-eyebrow">PAUL CHAVEZ</p>
+    <h2 class="about-headline">Not a brand.<br><span class="red">An artist.</span></h2>
+    <p class="about-body">Based in Los Angeles. Making photographs, beats, zines, books, and software. Everything is connected — it's all the same creative impulse expressed in different forms.</p>
+    <a href="studio.html" class="btn-outline">READ THE BIO</a>
+  </div>
+</section>
+<section class="section medium-index">
+  <div class="medium-row"><span class="medium-num">001</span><span class="medium-name">Photography</span><a href="photography.html" class="medium-link">View Series &rarr;</a></div>
+  <div class="medium-row"><span class="medium-num">002</span><span class="medium-name">Beat Production</span><a href="beats.html" class="medium-link">Listen &rarr;</a></div>
+  <div class="medium-row"><span class="medium-num">003</span><span class="medium-name">Zines &amp; Prints</span><a href="zines.html" class="medium-link">Shop &rarr;</a></div>
+  <div class="medium-row"><span class="medium-num">004</span><span class="medium-name">Children's Book</span><a href="book.html" class="medium-link">Read More &rarr;</a></div>
+  <div class="medium-row"><span class="medium-num">005</span><span class="medium-name">Mobile App</span><a href="app.html" class="medium-link">Explore &rarr;</a></div>
+</section>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
+    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
+    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
+window.addEventListener('scroll',function(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);});
+</script>
+</body>
+</html>
