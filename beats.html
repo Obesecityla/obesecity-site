@@ -4,68 +4,166 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beats — OBESECITY</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav scrolled" id="nav">
+<div class="page-transition-overlay"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">OBESECITY</a>
-  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="beats.html" class="active">Beats</a></li>
-    <li><a href="zines.html">Zines</a></li>
-    <li><a href="book.html">Book</a></li>
-    <li><a href="app.html">App</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="studio.html" class="nav-studio">Studio</a></li>
-  </ul>
+  <button class="nav-menu-btn" id="menuBtn">menu</button>
 </nav>
-<div class="hero hero-inner">
-  <div class="hero-bg" style="background-image:url('https://lh3.googleusercontent.com/2bHhFiuJoVIhCBiFDH4gvRmWiCpHGVBgTPZCzT4EGFzRv6H2GOJYSH1v1qzPbSFLX6Qz3VL-FQHyCqJHdJNdWHJmBQp3Ym74=s0')"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <span class="release-label">Latest Release</span>
-    <h1 class="hero-title">ON THE <span class="red">ROCKS</span></h1>
-    <p class="hero-desc" style="margin-bottom:2rem;">2023 &middot; Instrumental &middot; Hip-Hop / Lo-Fi</p>
-    <a href="#" class="btn-primary" style="margin-right:1rem;">STREAM NOW</a>
-    <a href="#discography" class="btn-outline">FULL DISCOGRAPHY</a>
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" id="navClose">close</button>
+  <ul class="nav-overlay-links">
+    <li><a href="photography.html" class="nav-overlay-link">Photography</a></li>
+    <li><a href="beats.html" class="nav-overlay-link">Beats</a></li>
+    <li><a href="zines.html" class="nav-overlay-link">Zines</a></li>
+    <li><a href="book.html" class="nav-overlay-link">Book</a></li>
+    <li><a href="app.html" class="nav-overlay-link">App</a></li>
+    <li><a href="contact.html" class="nav-overlay-link">Contact</a></li>
+  </ul>
+</div>
+
+<section class="page-hero reveal-up">
+  <div class="page-hero-label">LATEST RELEASE</div>
+  <h1 class="page-hero-title">ESCAPE<br><span class="red">HATCH</span></h1>
+  <p class="page-hero-meta">2025 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; Jazz-Hop / Soul / Lo-Fi</p>
+  <div class="page-hero-actions">
+    <a href="https://obesecity.bandcamp.com/album/escape-hatch" target="_blank" class="btn-red btn-magnetic">STREAM NOW</a>
+    <a href="https://obesecity.bandcamp.com/music" target="_blank" class="btn-outline btn-magnetic">FULL DISCOGRAPHY</a>
+  </div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-strip">
+    <span>BEATS &nbsp;&#8212;&nbsp; INSTRUMENTALS &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; SYNC LICENSING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; BEAT TAPES &nbsp;&#8212;&nbsp; INDEPENDANT &nbsp;&#8212;&nbsp; </span>
+    <span>BEATS &nbsp;&#8212;&nbsp; INSTRUMENTALS &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; SYNC LICENSING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; BEAT TAPES &nbsp;&#8212;&nbsp; INDEPENDANT &nbsp;&#8212;&nbsp; </span>
   </div>
 </div>
-<section class="discography" id="discography">
-  <div class="section-header"><h2>DISCOGRAPHY</h2><div class="rule"></div></div>
-  <div class="disc-row">
-    <span class="disc-num">01</span>
-    <div class="disc-art" style="background-image:url('https://lh3.googleusercontent.com/2bHhFiuJoVIhCBiFDH4gvRmWiCpHGVBgTPZCzT4EGFzRv6H2GOJYSH1v1qzPbSFLX6Qz3VL-FQHyCqJHdJNdWHJmBQp3Ym74=s0')"></div>
-    <div class="disc-info"><div class="disc-title">On The Rocks</div><div class="disc-year">2023 &middot; LP &middot; Instrumental</div></div>
-    <a href="#" class="disc-link">Stream &rarr;</a>
-  </div>
-  <div class="disc-row">
-    <span class="disc-num">02</span>
-    <div class="disc-art" style="background:#1a1a1a;"></div>
-    <div class="disc-info"><div class="disc-title">Early Works</div><div class="disc-year">2021 &middot; EP &middot; Beats</div></div>
-    <a href="#" class="disc-link">Stream &rarr;</a>
-  </div>
-  <div class="disc-row">
-    <span class="disc-num">03</span>
-    <div class="disc-art" style="background:#161616;"></div>
-    <div class="disc-info"><div class="disc-title">Instrumentals Vol. 1</div><div class="disc-year">2020 &middot; Beats &middot; Production</div></div>
-    <a href="#" class="disc-link">Stream &rarr;</a>
+
+<section class="section discography reveal-up">
+  <h2 class="section-title">DISCOGRAPHY</h2>
+  <div class="red-rule"></div>
+  <div class="album-grid">
+
+    <div class="album-row reveal-left">
+      <div class="album-num red">001</div>
+      <div class="album-info">
+        <h3 class="album-title">ESCAPE HATCH</h3>
+        <p class="album-meta">June 2025 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 10 tracks</p>
+        <p class="album-tags">jazzhop &middot; soul &middot; chillhop &middot; lo-fi</p>
+      </div>
+      <a href="https://obesecity.bandcamp.com/album/escape-hatch" target="_blank" class="album-link red">Listen</a>
+    </div>
+
+    <div class="album-row reveal-left">
+      <div class="album-num red">002</div>
+      <div class="album-info">
+        <h3 class="album-title">BAGGAGE CLAIM</h3>
+        <p class="album-meta">March 2016 &nbsp;&middot;&nbsp; Hip-Hop / Rap &nbsp;&middot;&nbsp; 9 tracks</p>
+        <p class="album-tags">w/ 2Mex &middot; features &middot; Los Angeles</p>
+      </div>
+      <a href="https://obesecity.bandcamp.com/album/baggage-claim" target="_blank" class="album-link red">Listen</a>
+    </div>
+
+    <div class="album-row reveal-left">
+      <div class="album-num red">003</div>
+      <div class="album-info">
+        <h3 class="album-title">NULL</h3>
+        <p class="album-meta">April 2015 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 19 tracks</p>
+        <p class="album-tags">hip-hop &middot; instrumental &middot; Los Angeles</p>
+      </div>
+      <a href="https://obesecity.bandcamp.com/album/null" target="_blank" class="album-link red">Listen</a>
+    </div>
+
+    <div class="album-row reveal-left">
+      <div class="album-num red">004</div>
+      <div class="album-info">
+        <h3 class="album-title">ON THE ROCKS</h3>
+        <p class="album-meta">February 2015 &nbsp;&middot;&nbsp; Instrumental &nbsp;&middot;&nbsp; 20 tracks</p>
+        <p class="album-tags">hip-hop/rap &middot; debut &middot; Los Angeles</p>
+      </div>
+      <a href="https://obesecity.bandcamp.com/album/on-the-rocks" target="_blank" class="album-link red">Listen</a>
+    </div>
+
   </div>
 </section>
-<section class="sync-section">
-  <div class="section-header"><h2>SYNC LICENSING</h2><div class="rule"></div></div>
-  <p style="color:#888;max-width:550px;margin-bottom:2rem;line-height:1.75;">Music available for licensing in film, TV, advertising, and digital media. All beats are original compositions, fully cleared for sync use.</p>
-  <a href="contact.html" class="btn-primary">INQUIRE ABOUT LICENSING</a>
+
+<section class="section sync-section reveal-up">
+  <h2 class="section-title">SYNC LICENSING</h2>
+  <div class="red-rule"></div>
+  <p class="sync-body">Music available for licensing in film, TV, advertising, and digital media. All beats are original compositions, fully cleared for sync use.</p>
+  <a href="contact.html" class="btn-red btn-magnetic">INQUIRE ABOUT LICENSING</a>
 </section>
-<footer class="footer">
+
+<footer class="footer reveal-up">
   <div class="footer-inner">
-    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
-    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
-    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+    <div class="footer-left">
+      <div class="footer-logo">OBESECITY</div>
+      <p>Los Angeles - Creative Studio</p>
+      <p class="footer-copy">2025 Paul Chavez ObeseCity</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="contact.html">CONTACT</a>
+      <a href="studio.html">STUDIO</a>
+      <a href="mailto:obesecity.la@gmail.com">OBESECITY.LA@GMAIL.COM</a>
+    </nav>
   </div>
 </footer>
-<script>function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}</script>
+
+<script>
+(function(){
+  // Cursor
+  const dot = document.querySelector('.cursor-dot');
+  const ring = document.querySelector('.cursor-ring');
+  if (window.matchMedia('(pointer:fine)').matches) {
+    document.addEventListener('mousemove', e => {
+      dot.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
+      ring.style.transform = 'translate(' + (e.clientX-12) + 'px,' + (e.clientY-12) + 'px)';
+    });
+    document.querySelectorAll('a,button').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+    });
+  }
+  // Nav scroll
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
+  // Menu overlay
+  document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
+  document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
+  // Scroll reveals
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal-up, .reveal-left').forEach(el => observer.observe(el));
+  // Page transition
+  const overlay = document.querySelector('.page-transition-overlay');
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.startsWith('#')) {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        overlay.classList.add('active');
+        setTimeout(() => { window.location.href = href; }, 400);
+      });
+    }
+  });
+  setTimeout(() => overlay.classList.remove('active'), 100);
+  // Magnetic buttons
+  document.querySelectorAll('.btn-magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width/2;
+      const y = e.clientY - r.top - r.height/2;
+      btn.style.transform = 'translate(' + x*0.25 + 'px,' + y*0.25 + 'px)';
+    });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  });
+})();
+</script>
 </body>
 </html>
