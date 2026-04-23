@@ -4,60 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Studio — OBESECITY</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav scrolled" id="nav">
+<div class="page-transition-overlay"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">OBESECITY</a>
-  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="beats.html">Beats</a></li>
-    <li><a href="zines.html">Zines</a></li>
-    <li><a href="book.html">Book</a></li>
-    <li><a href="app.html">App</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="studio.html" class="nav-studio active">Studio</a></li>
-  </ul>
+  <button class="nav-menu-btn" id="menuBtn">menu</button>
 </nav>
-<div class="page-hero" style="border-bottom:1px solid #1e1e1e;">
-  <p class="about-eyebrow" style="color:#d62828;">Press &middot; Bio &middot; Info</p>
-  <h1>OBESE<span class="red">CITY</span></h1>
-  <p>Paul Chavez &mdash; Los Angeles</p>
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" id="navClose">close</button>
+  <ul class="nav-overlay-links">
+    <li><a href="photography.html" class="nav-overlay-link">Photography</a></li>
+    <li><a href="beats.html" class="nav-overlay-link">Beats</a></li>
+    <li><a href="zines.html" class="nav-overlay-link">Zines</a></li>
+    <li><a href="book.html" class="nav-overlay-link">Book</a></li>
+    <li><a href="app.html" class="nav-overlay-link">App</a></li>
+    <li><a href="contact.html" class="nav-overlay-link">Contact</a></li>
+  </ul>
 </div>
-<div class="studio-content">
-  <h3>ABOUT</h3>
-  <p>OBESECITY is the creative identity of Paul Chavez, a Los Angeles-based multi-disciplinary artist working across photography, music production, publishing, and software development.</p>
-  <p>The work is connected — the same eye that frames a photograph on the street informs how a beat is structured, how a zine is sequenced, how an app is designed. Everything is the same creative impulse in a different form.</p>
-  <p>Not a brand. An artist. The distinction matters.</p>
-  <h3>WORK</h3>
-  <p>Photography: Street, documentary, and portrait work shot primarily on film. Published across three self-produced zine volumes — Los Angeles, New York, and Chicago — with prints available in limited editions.</p>
-  <p>Music: Instrumental beat production under the OBESECITY name. "On The Rocks" (2023) is the latest full-length release. Available for sync licensing in film, television, and advertising.</p>
-  <p>Publishing: Three-volume zine series and "For The Children," a self-published children's picture book.</p>
-  <p>Software: Independent mobile app development. Built from the ground up, released independently on iOS and Android.</p>
-  <h3>CONTACT &amp; BOOKING</h3>
-  <p>For press inquiries, licensing, print orders, wholesale book orders, or collaboration proposals:</p>
-  <p><a href="mailto:ObeseCity.LA@gmail.com" style="color:#d62828;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.2rem;">ObeseCity.LA@gmail.com</a></p>
-  <h3>CREDITS</h3>
-  <div class="credits-grid">
-    <div class="credit-item"><div class="credit-label">Photography</div><div class="credit-value">Paul Chavez</div></div>
-    <div class="credit-item"><div class="credit-label">Beat Production</div><div class="credit-value">Paul Chavez</div></div>
-    <div class="credit-item"><div class="credit-label">Zines</div><div class="credit-value">Self-Published</div></div>
-    <div class="credit-item"><div class="credit-label">Book</div><div class="credit-value">Self-Published</div></div>
-    <div class="credit-item"><div class="credit-label">App Dev</div><div class="credit-value">Independent</div></div>
-    <div class="credit-item"><div class="credit-label">Based In</div><div class="credit-value">Los Angeles, CA</div></div>
+
+<section class="page-hero reveal-up">
+  <div class="page-hero-label">THE SPACE</div>
+  <h1 class="page-hero-title">STU<br><span class="red">DIO</span></h1>
+  <p class="page-hero-meta">Creative Services &nbsp;&middot;&nbsp; Production &nbsp;&middot;&nbsp; Los Angeles</p>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-strip">
+    <span>STUDIO &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; CREATIVE SERVICES &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+    <span>STUDIO &nbsp;&#8212;&nbsp; PRODUCTION &nbsp;&#8212;&nbsp; CREATIVE SERVICES &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
   </div>
-  <a href="contact.html" class="btn-primary" style="display:inline-block;margin-top:2rem;">GET IN TOUCH</a>
 </div>
-<footer class="footer">
+
+<section class="studio-section reveal-up">
+  <div class="studio-grid">
+    <div class="studio-info">
+      <h2 class="section-title">WHAT WE DO</h2>
+      <div class="red-rule"></div>
+      <p>OBESECITY is a one-person independent creative studio based in Los Angeles. Music production, photography, publishing, and software — all under one roof.</p>
+      <a href="contact.html" class="btn-red btn-magnetic">WORK TOGETHER</a>
+    </div>
+    <div>
+      <h3 class="section-title" style="font-size:1.2rem;">SERVICES</h3>
+      <ul class="studio-services">
+        <li>Beat Production &amp; Licensing</li>
+        <li>Street &amp; Documentary Photography</li>
+        <li>Zine &amp; Print Publishing</li>
+        <li>Children's Book Writing</li>
+        <li>Mobile App Development</li>
+        <li>Creative Consulting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="footer reveal-up">
   <div class="footer-inner">
-    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
-    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
-    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+    <div class="footer-left">
+      <div class="footer-logo">OBESECITY</div>
+      <p>Los Angeles - Creative Studio</p>
+      <p class="footer-copy">2025 Paul Chavez ObeseCity</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="contact.html">CONTACT</a>
+      <a href="studio.html">STUDIO</a>
+      <a href="mailto:obesecity.la@gmail.com">OBESECITY.LA@GMAIL.COM</a>
+    </nav>
   </div>
 </footer>
-<script>function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}</script>
+
+<script>
+(function(){const dot=document.querySelector('.cursor-dot');const ring=document.querySelector('.cursor-ring');if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));});}const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);});document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});},{threshold:0.12});document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));const overlay=document.querySelector('.page-transition-overlay');document.querySelectorAll('a[href]').forEach(link=>{const href=link.getAttribute('href');if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){link.addEventListener('click',e=>{e.preventDefault();overlay.classList.add('active');setTimeout(()=>{window.location.href=href;},400);});}});setTimeout(()=>overlay.classList.remove('active'),100);document.querySelectorAll('.btn-magnetic').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});})();
+</script>
 </body>
 </html>
