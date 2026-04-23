@@ -4,83 +4,84 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>App — OBESECITY</title>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav class="nav scrolled" id="nav">
+<div class="page-transition-overlay"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<nav class="nav" id="mainNav">
   <a href="index.html" class="nav-logo">OBESECITY</a>
-  <button class="nav-toggle" onclick="toggleMenu()">&#9776;</button>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="photography.html">Photography</a></li>
-    <li><a href="beats.html">Beats</a></li>
-    <li><a href="zines.html">Zines</a></li>
-    <li><a href="book.html">Book</a></li>
-    <li><a href="app.html" class="active">App</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="studio.html" class="nav-studio">Studio</a></li>
-  </ul>
+  <button class="nav-menu-btn" id="menuBtn">menu</button>
 </nav>
-<div class="page-hero">
-  <p class="about-eyebrow">Mobile Application</p>
-  <h1>THE <span class="red">APP</span></h1>
-  <p>An independent mobile release. Built from scratch.</p>
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-overlay-close" id="navClose">close</button>
+  <ul class="nav-overlay-links">
+    <li><a href="photography.html" class="nav-overlay-link">Photography</a></li>
+    <li><a href="beats.html" class="nav-overlay-link">Beats</a></li>
+    <li><a href="zines.html" class="nav-overlay-link">Zines</a></li>
+    <li><a href="book.html" class="nav-overlay-link">Book</a></li>
+    <li><a href="app.html" class="nav-overlay-link">App</a></li>
+    <li><a href="contact.html" class="nav-overlay-link">Contact</a></li>
+  </ul>
 </div>
-<section class="section" style="background:#111;">
-  <div style="display:grid;grid-template-columns:1fr 2fr;gap:5rem;align-items:center;max-width:1100px;">
-    <div style="background:#0a0a0a;border:1px solid #222;border-radius:24px;padding:3rem;text-align:center;aspect-ratio:9/16;display:flex;align-items:center;justify-content:center;">
-      <div>
-        <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.5rem;text-transform:uppercase;">OBESECITY</div>
-        <div style="font-size:0.75rem;color:#555;margin-top:0.5rem;letter-spacing:0.15em;">APP</div>
-      </div>
+
+<section class="page-hero reveal-up">
+  <div class="page-hero-label">MOBILE APP</div>
+  <h1 class="page-hero-title">MOBILE<br><span class="red">APP</span></h1>
+  <p class="page-hero-meta">iOS &amp; Android &nbsp;&middot;&nbsp; Indie Software &nbsp;&middot;&nbsp; Los Angeles</p>
+  <div class="page-hero-actions">
+    <a href="contact.html" class="btn-red btn-magnetic">EXPLORE</a>
+  </div>
+</section>
+
+<div class="ticker-wrap">
+  <div class="ticker-strip">
+    <span>MOBILE APP &nbsp;&#8212;&nbsp; iOS &amp; ANDROID &nbsp;&#8212;&nbsp; INDIE SOFTWARE &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+    <span>MOBILE APP &nbsp;&#8212;&nbsp; iOS &amp; ANDROID &nbsp;&#8212;&nbsp; INDIE SOFTWARE &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+  </div>
+</div>
+
+<section class="app-section reveal-up">
+  <h2 class="section-title">FEATURES</h2>
+  <div class="red-rule"></div>
+  <div class="app-features">
+    <div class="app-feature reveal-up">
+      <div class="app-feature-num">01</div>
+      <h4>MUSIC PLAYER</h4>
+      <p>Stream all OBESECITY releases directly from the app.</p>
     </div>
-    <div>
-      <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3.5rem;text-transform:uppercase;margin-bottom:1.5rem;">BUILT <span class="red">INDEPENDENT</span></h2>
-      <p style="color:#aaa;line-height:1.75;margin-bottom:1.5rem;">An independently developed mobile application. Not backed by investors, not built with a team. Just code and intention — the same creative approach as everything else in the OBESECITY universe.</p>
-      <p style="color:#aaa;line-height:1.75;margin-bottom:2rem;">Available on iOS and Android. Free to download.</p>
-      <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="#" class="btn-primary">APP STORE</a>
-        <a href="#" class="btn-outline">GOOGLE PLAY</a>
-      </div>
+    <div class="app-feature reveal-up">
+      <div class="app-feature-num">02</div>
+      <h4>PHOTO GALLERY</h4>
+      <p>Browse the photography archive, updated regularly.</p>
+    </div>
+    <div class="app-feature reveal-up">
+      <div class="app-feature-num">03</div>
+      <h4>SHOP</h4>
+      <p>Purchase beats, zines, prints, and books in-app.</p>
     </div>
   </div>
 </section>
-<div class="app-features">
-  <div class="feature-card">
-    <div class="feature-icon">&#128247;</div>
-    <h3>Photography Tools</h3>
-    <p>Built-in tools for the working street photographer. Fast, minimal, no bloat.</p>
-  </div>
-  <div class="feature-card">
-    <div class="feature-icon">&#127925;</div>
-    <h3>Beat Discovery</h3>
-    <p>Direct access to the full discography. Stream instrumentals while you shoot.</p>
-  </div>
-  <div class="feature-card">
-    <div class="feature-icon">&#128218;</div>
-    <h3>Zine Archive</h3>
-    <p>Browse all three volumes of the zine series. Read anywhere, no wifi needed.</p>
-  </div>
-  <div class="feature-card">
-    <div class="feature-icon">&#127758;</div>
-    <h3>City Guides</h3>
-    <p>Shooting locations, hidden spots, recommended light times. LA, NYC, Chicago.</p>
-  </div>
-</div>
-<div class="app-cta">
-  <h2>DOWNLOAD <span class="red">NOW</span></h2>
-  <p style="color:#888;margin-bottom:2.5rem;max-width:400px;margin-left:auto;margin-right:auto;">Free. Independent. No ads. No tracking.</p>
-  <a href="#" class="btn-primary" style="margin-right:1rem;">APP STORE</a>
-  <a href="#" class="btn-outline">GOOGLE PLAY</a>
-</div>
-<footer class="footer">
+
+<footer class="footer reveal-up">
   <div class="footer-inner">
-    <div class="footer-brand"><span class="footer-logo">OBESECITY</span><span class="footer-tagline">Los Angeles &middot; Creative Studio</span></div>
-    <div class="footer-links"><a href="contact.html">Contact</a><a href="studio.html">Studio</a><a href="mailto:ObeseCity.LA@gmail.com">ObeseCity.LA@gmail.com</a></div>
-    <div class="footer-copy">&copy; 2025 Paul Chavez / ObeseCity</div>
+    <div class="footer-left">
+      <div class="footer-logo">OBESECITY</div>
+      <p>Los Angeles - Creative Studio</p>
+      <p class="footer-copy">2025 Paul Chavez ObeseCity</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="contact.html">CONTACT</a>
+      <a href="studio.html">STUDIO</a>
+      <a href="mailto:obesecity.la@gmail.com">OBESECITY.LA@GMAIL.COM</a>
+    </nav>
   </div>
 </footer>
-<script>function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}</script>
+
+<script>
+(function(){const dot=document.querySelector('.cursor-dot');const ring=document.querySelector('.cursor-ring');if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));});}const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);});document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});},{threshold:0.12});document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));const overlay=document.querySelector('.page-transition-overlay');document.querySelectorAll('a[href]').forEach(link=>{const href=link.getAttribute('href');if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){link.addEventListener('click',e=>{e.preventDefault();overlay.classList.add('active');setTimeout(()=>{window.location.href=href;},400);});}});setTimeout(()=>overlay.classList.remove('active'),100);document.querySelectorAll('.btn-magnetic').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});})();
+</script>
 </body>
 </html>
