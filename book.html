@@ -3,9 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book — OBESECITY</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>The Booger Queen — OBESECITY</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+/* BOOK VIEWER */
+.book-viewer{background:#0a0a0a;min-height:100vh;padding:80px 0 120px;display:flex;flex-direction:column;align-items:center;}
+.book-title-block{text-align:center;margin-bottom:48px;}
+.book-title-block .eyebrow{font-family:'Space Grotesk',sans-serif;font-size:11px;letter-spacing:.25em;color:#d60000;text-transform:uppercase;margin-bottom:12px;}
+.book-title-block h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:600;color:#fff;line-height:1.1;margin:0;}
+.book-title-block h1 span{color:#d60000;}
+.book-title-block .subtitle{font-family:'Lora',serif;font-style:italic;color:#888;font-size:1rem;margin-top:8px;}
+
+/* CAROUSEL */
+.carousel-wrap{width:min(900px,95vw);position:relative;}
+.carousel-track{display:flex;transition:transform .5s cubic-bezier(.77,0,.18,1);will-change:transform;}
+.book-slide{min-width:100%;display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:4px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.8);}
+.slide-art{background:#111;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.slide-art svg{width:100%;height:100%;}
+.slide-text{background:#f5f0e8;padding:clamp(24px,4vw,56px);display:flex;flex-direction:column;justify-content:center;gap:20px;}
+.slide-text .page-num{font-family:'Space Grotesk',sans-serif;font-size:10px;letter-spacing:.2em;color:#999;text-transform:uppercase;}
+.slide-text h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1rem,2.5vw,1.6rem);font-weight:600;color:#111;line-height:1.2;margin:0;}
+.slide-text p{font-family:'Lora',serif;font-size:clamp(.9rem,1.5vw,1.1rem);line-height:1.8;color:#333;margin:0;}
+.slide-text .spoken{font-family:'Lora',serif;font-style:italic;font-size:clamp(.85rem,1.4vw,1rem);color:#555;border-left:3px solid #d60000;padding-left:16px;margin-top:4px;}
+/* COVER slide */
+.slide-cover{grid-template-columns:1fr;background:#0d0d0d;}
+.slide-cover .slide-art{aspect-ratio:auto;min-height:clamp(300px,50vw,560px);}
+
+/* CONTROLS */
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px;}
+.carousel-btn{background:none;border:1px solid #333;color:#fff;width:48px;height:48px;border-radius:50%;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.carousel-btn:hover{background:#d60000;border-color:#d60000;}
+.carousel-btn:disabled{opacity:.3;cursor:default;}
+.dots{display:flex;gap:8px;align-items:center;}
+.dot{width:8px;height:8px;border-radius:50%;background:#333;border:none;cursor:pointer;transition:all .2s;padding:0;}
+.dot.active{background:#d60000;transform:scale(1.3);}
+.slide-counter{font-family:'Space Grotesk',sans-serif;font-size:12px;color:#555;letter-spacing:.1em;min-width:48px;text-align:center;}
+
+@media(max-width:640px){
+  .book-slide{grid-template-columns:1fr;}
+  .slide-art{aspect-ratio:1/1;}
+  .slide-cover{grid-template-columns:1fr;}
+}
+</style>
 </head>
 <body>
 <div class="page-transition-overlay"></div>
@@ -26,35 +66,624 @@
     <li><a href="contact.html" class="nav-overlay-link">Contact</a></li>
   </ul>
 </div>
-
-<section class="page-hero reveal-up">
-  <div class="page-hero-label">FOR THE CHILDREN</div>
-  <h1 class="page-hero-title">KIDS<br><span class="red">BOOK</span></h1>
-  <p class="page-hero-meta">Children's Picture Book &nbsp;&middot;&nbsp; Self-Published &nbsp;&middot;&nbsp; Los Angeles</p>
-  <div class="page-hero-actions">
-    <a href="contact.html" class="btn-red btn-magnetic">READ MORE</a>
+<!-- BOOK VIEWER SECTION -->
+<main class="book-viewer">
+  <div class="book-title-block">
+    <div class="eyebrow">OBESECITY PRESENTS</div>
+    <h1>THE BOOGER <span>QUEEN</span></h1>
+    <p class="subtitle">Vol. 2 — A Children's Picture Book</p>
   </div>
-</section>
 
-<div class="ticker-wrap">
-  <div class="ticker-strip">
-    <span>FOR THE CHILDREN &nbsp;&#8212;&nbsp; KIDS PICTURE BOOK &nbsp;&#8212;&nbsp; SELF-PUBLISHED &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
-    <span>FOR THE CHILDREN &nbsp;&#8212;&nbsp; KIDS PICTURE BOOK &nbsp;&#8212;&nbsp; SELF-PUBLISHED &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; INDEPENDENT &nbsp;&#8212;&nbsp; </span>
+  <div class="carousel-wrap">
+    <div class="carousel-track" id="carouselTrack">
+
+      <!-- SLIDE 1: COVER -->
+      <div class="book-slide slide-cover">
+        <div class="slide-art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="bggrad" cx="50%" cy="60%" r="70%">
+    <stop offset="0%" stop-color="#1a0a2e"/>
+    <stop offset="100%" stop-color="#050508"/>
+  </radialGradient>
+  <radialGradient id="glowQ" cx="50%" cy="40%" r="50%">
+    <stop offset="0%" stop-color="#d60000" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#d60000" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="400" height="400" fill="url(#bggrad)"/>
+<rect width="400" height="400" fill="url(#glowQ)"/>
+<!-- Stars -->
+<circle cx="40" cy="30" r="1.5" fill="#fff" opacity=".8"/>
+<circle cx="360" cy="20" r="1" fill="#fff" opacity=".6"/>
+<circle cx="80" cy="60" r="1" fill="#fff" opacity=".5"/>
+<circle cx="320" cy="55" r="1.5" fill="#fff" opacity=".7"/>
+<circle cx="15" cy="120" r="1" fill="#fff" opacity=".4"/>
+<circle cx="385" cy="100" r="1" fill="#fff" opacity=".6"/>
+<circle cx="200" cy="10" r="1.5" fill="#fff" opacity=".9"/>
+<circle cx="150" cy="25" r="1" fill="#fff" opacity=".5"/>
+<!-- Throne base -->
+<rect x="120" y="280" width="160" height="90" fill="#1a0020" rx="4"/>
+<rect x="100" y="270" width="200" height="20" fill="#2a003a" rx="3"/>
+<!-- Throne back -->
+<rect x="130" y="160" width="140" height="130" fill="#1a0020" rx="6"/>
+<rect x="118" y="150" width="164" height="20" fill="#2a003a" rx="4"/>
+<!-- Crown -->
+<polygon points="170,95 183,118 200,100 217,118 230,95 240,140 160,140" fill="#d60000"/>
+<polygon points="183,118 200,100 217,118" fill="#ff4040" opacity=".6"/>
+<circle cx="200" cy="102" r="5" fill="#fff" opacity=".9"/>
+<circle cx="183" cy="118" r="4" fill="#ffcc00"/>
+<circle cx="217" cy="118" r="4" fill="#ffcc00"/>
+<!-- Queen body - big green blob -->
+<ellipse cx="200" cy="230" rx="65" ry="75" fill="#2d8a3e"/>
+<ellipse cx="200" cy="220" rx="58" ry="65" fill="#3aaa50"/>
+<!-- Queen face -->
+<ellipse cx="200" cy="195" rx="40" ry="38" fill="#4dc462"/>
+<!-- Eyes -->
+<ellipse cx="188" cy="188" rx="9" ry="10" fill="#fff"/>
+<ellipse cx="212" cy="188" rx="9" ry="10" fill="#fff"/>
+<circle cx="190" cy="190" r="5" fill="#111"/>
+<circle cx="214" cy="190" r="5" fill="#111"/>
+<circle cx="191" cy="188" r="2" fill="#fff"/>
+<circle cx="215" cy="188" r="2" fill="#fff"/>
+<!-- Eyebrows -->
+<path d="M181,179 Q188,175 196,179" stroke="#1a5a28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<path d="M204,179 Q211,175 220,179" stroke="#1a5a28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+<!-- Smile -->
+<path d="M186,206 Q200,218 214,206" stroke="#1a5a28" stroke-width="3" fill="none" stroke-linecap="round"/>
+<!-- Boogers -->
+<ellipse cx="197" cy="201" rx="4" ry="5" fill="#5ae870" opacity=".8"/>
+<ellipse cx="203" cy="202" rx="3.5" ry="4.5" fill="#5ae870" opacity=".8"/>
+<!-- Arms -->
+<ellipse cx="145" cy="235" rx="22" ry="12" fill="#3aaa50" transform="rotate(-20,145,235)"/>
+<ellipse cx="255" cy="235" rx="22" ry="12" fill="#3aaa50" transform="rotate(20,255,235)"/>
+<!-- Flames at bottom -->
+<ellipse cx="100" cy="375" rx="18" ry="10" fill="#d60000" opacity=".7"/>
+<ellipse cx="140" cy="368" rx="14" ry="8" fill="#ff6600" opacity=".8"/>
+<ellipse cx="260" cy="368" rx="14" ry="8" fill="#ff6600" opacity=".8"/>
+<ellipse cx="300" cy="375" rx="18" ry="10" fill="#d60000" opacity=".7"/>
+<path d="M95,375 Q100,355 108,370 Q115,350 120,368 Q128,340 135,365" stroke="#d60000" stroke-width="3" fill="none" opacity=".9"/>
+<path d="M265,368 Q270,348 278,365 Q285,342 290,362 Q296,340 300,360" stroke="#ff6600" stroke-width="3" fill="none" opacity=".9"/>
+<!-- Title text -->
+<text x="200" y="345" text-anchor="middle" font-family="serif" font-size="22" font-weight="bold" fill="#fff" letter-spacing="2">THE BOOGER</text>
+<text x="200" y="372" text-anchor="middle" font-family="serif" font-size="22" font-weight="bold" fill="#d60000" letter-spacing="2">QUEEN</text>
+<text x="200" y="390" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#888" letter-spacing="3">VOL. 2</text>
+</svg></div>
+      </div>
+
+      <!-- SLIDE 2: THE REALM -->
+      <div class="book-slide">
+        <div class="slide-art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="sky2" cx="50%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#3a1a00"/>
+    <stop offset="100%" stop-color="#0a0808"/>
+  </radialGradient>
+  <radialGradient id="planet2" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1a2a1a"/>
+    <stop offset="100%" stop-color="#050a05"/>
+  </radialGradient>
+  <radialGradient id="treeGlow" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#00ffa0" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#00ffa0" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="softglow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="400" height="400" fill="url(#sky2)"/>
+<!-- Stars -->
+<circle cx="30" cy="20" r="1.5" fill="#fff" opacity=".7"/>
+<circle cx="370" cy="35" r="1" fill="#fff" opacity=".5"/>
+<circle cx="60" cy="50" r="1" fill="#fff" opacity=".6"/>
+<circle cx="330" cy="25" r="1.5" fill="#fff" opacity=".8"/>
+<circle cx="10" cy="80" r="1" fill="#fff" opacity=".4"/>
+<circle cx="390" cy="70" r="1" fill="#fff" opacity=".6"/>
+<circle cx="200" cy="15" r="2" fill="#00ffa0" opacity=".6"/>
+<!-- Planet/world -->
+<circle cx="200" cy="260" r="160" fill="url(#planet2)"/>
+<circle cx="200" cy="260" r="160" fill="none" stroke="#1a3a1a" stroke-width="2"/>
+<!-- Terrain details on planet -->
+<ellipse cx="140" cy="310" rx="40" ry="15" fill="#0f1f0f" opacity=".7"/>
+<ellipse cx="280" cy="295" rx="30" ry="12" fill="#0f1f0f" opacity=".6"/>
+<ellipse cx="200" cy="340" rx="60" ry="20" fill="#0f1f0f" opacity=".5"/>
+<!-- Tree trunk -->
+<rect x="192" y="180" width="16" height="90" fill="#4a2a10" rx="4"/>
+<!-- Tree glow aura -->
+<circle cx="200" cy="155" r="70" fill="url(#treeGlow)" filter="url(#softglow)"/>
+<!-- Tree branches -->
+<line x1="200" y1="220" x2="150" y2="185" stroke="#4a2a10" stroke-width="8" stroke-linecap="round"/>
+<line x1="200" y1="210" x2="248" y2="178" stroke="#4a2a10" stroke-width="7" stroke-linecap="round"/>
+<line x1="200" y1="200" x2="165" y2="168" stroke="#4a2a10" stroke-width="6" stroke-linecap="round"/>
+<line x1="200" y1="195" x2="232" y2="162" stroke="#4a2a10" stroke-width="6" stroke-linecap="round"/>
+<line x1="200" y1="185" x2="185" y2="158" stroke="#4a2a10" stroke-width="5" stroke-linecap="round"/>
+<line x1="200" y1="185" x2="215" y2="155" stroke="#4a2a10" stroke-width="5" stroke-linecap="round"/>
+<!-- Teal leaf clusters -->
+<circle cx="200" cy="140" r="40" fill="#00c8a0" opacity=".9" filter="url(#softglow)"/>
+<circle cx="160" cy="160" r="30" fill="#00b890" opacity=".85"/>
+<circle cx="240" cy="158" r="28" fill="#00b890" opacity=".85"/>
+<circle cx="175" cy="140" r="25" fill="#00d8b0" opacity=".8"/>
+<circle cx="225" cy="138" r="25" fill="#00d8b0" opacity=".8"/>
+<circle cx="200" cy="115" r="22" fill="#00e8c0" opacity=".9"/>
+<circle cx="148" cy="172" r="18" fill="#009a78" opacity=".8"/>
+<circle cx="252" cy="170" r="18" fill="#009a78" opacity=".8"/>
+<!-- Tiny glowing fruits -->
+<circle cx="185" cy="128" r="4" fill="#ffcc00" opacity=".9"/>
+<circle cx="215" cy="122" r="4" fill="#ffcc00" opacity=".9"/>
+<circle cx="165" cy="148" r="3.5" fill="#ff8800" opacity=".9"/>
+<circle cx="234" cy="145" r="3.5" fill="#ff8800" opacity=".9"/>
+<!-- Fireflies/particles -->
+<circle cx="130" cy="200" r="2" fill="#00ffa0" opacity=".7"/>
+<circle cx="270" cy="190" r="2" fill="#00ffa0" opacity=".6"/>
+<circle cx="155" cy="240" r="1.5" fill="#00ffa0" opacity=".5"/>
+<circle cx="250" cy="235" r="1.5" fill="#00ffa0" opacity=".6"/>
+</svg></div>
+        <div class="slide-text">
+          <div class="page-num">Page 1</div>
+          <h2>A World Unlike Any Other</h2>
+          <p>Far beyond the edges of where maps dare to venture, there exists a kingdom hidden in the folds of the universe — a living, breathing world ruled by the one they call The Booger Queen.</p>
+          <p>The great glowing tree at the center of her realm had stood since before memory. Its teal branches reached like arms toward the stars, and every fruit it bore held a wish inside.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: THE CAVE -->
+      <div class="book-slide">
+        <div class="slide-art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="bg3" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="#0a0a15"/>
+    <stop offset="100%" stop-color="#030305"/>
+  </radialGradient>
+  <radialGradient id="caveGlow" cx="50%" cy="60%" r="40%">
+    <stop offset="0%" stop-color="#d60000" stop-opacity="0.25"/>
+    <stop offset="100%" stop-color="#d60000" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="400" height="400" fill="url(#bg3)"/>
+<rect width="400" height="400" fill="url(#caveGlow)"/>
+<!-- Cave mouth -->
+<ellipse cx="200" cy="260" rx="110" ry="130" fill="#050505"/>
+<ellipse cx="200" cy="255" rx="95" ry="115" fill="#080808"/>
+<!-- Cave stalactites -->
+<polygon points="120,130 135,170 150,130" fill="#111"/>
+<polygon points="155,120 168,165 183,120" fill="#0f0f0f"/>
+<polygon points="215,122 228,168 243,122" fill="#111"/>
+<polygon points="248,128 262,172 278,128" fill="#0f0f0f"/>
+<!-- Queen's crown peeking from darkness -->
+<polygon points="155,175 168,198 185,178 202,198 218,178 232,198 245,175 250,215 150,215" fill="#d60000" opacity=".9"/>
+<polygon points="168,198 185,178 202,198" fill="#ff4040" opacity=".6"/>
+<circle cx="185" cy="180" r="4" fill="#ffcc00"/>
+<circle cx="202" cy="180" r="5" fill="#fff" opacity=".9"/>
+<circle cx="218" cy="180" r="4" fill="#ffcc00"/>
+<!-- Glowing eyes in darkness -->
+<ellipse cx="183" cy="238" rx="10" ry="11" fill="#d60000" opacity=".9"/>
+<ellipse cx="217" cy="238" rx="10" ry="11" fill="#d60000" opacity=".9"/>
+<circle cx="183" cy="238" r="5" fill="#ff2020"/>
+<circle cx="217" cy="238" r="5" fill="#ff2020"/>
+<circle cx="185" cy="236" r="2" fill="#fff"/>
+<circle cx="219" cy="236" r="2" fill="#fff"/>
+<!-- Tiny visitor outside cave -->
+<ellipse cx="340" cy="330" rx="18" ry="20" fill="#4dc462"/>
+<ellipse cx="340" cy="320" rx="13" ry="14" fill="#5ae870"/>
+<circle cx="336" cy="318" r="3" fill="#111"/>
+<circle cx="344" cy="318" r="3" fill="#111"/>
+<circle cx="337" cy="317" r="1.2" fill="#fff"/>
+<circle cx="345" cy="317" r="1.2" fill="#fff"/>
+<path d="M334,325 Q340,330 346,325" stroke="#1a5a28" stroke-width="1.5" fill="none"/>
+<!-- Small question marks/curiosity marks -->
+<text x="354" y="305" font-family="serif" font-size="14" fill="#888" opacity=".6">?</text>
+<text x="345" y="295" font-family="serif" font-size="10" fill="#666" opacity=".4">?</text>
+<!-- Rocky ground -->
+<ellipse cx="80" cy="380" rx="60" ry="25" fill="#111"/>
+<ellipse cx="320" cy="385" rx="50" ry="20" fill="#111"/>
+<ellipse cx="200" cy="395" rx="120" ry="20" fill="#0d0d0d"/>
+<!-- Atmospheric particles -->
+<circle cx="100" cy="150" r="1.5" fill="#d60000" opacity=".3"/>
+<circle cx="300" cy="140" r="1.5" fill="#d60000" opacity=".3"/>
+<circle cx="170" cy="350" r="1" fill="#5ae870" opacity=".4"/>
+</svg></div>
+        <div class="slide-text">
+          <div class="page-num">Page 2</div>
+          <h2>The Queen Watches</h2>
+          <p>Deep inside the mountain cave at the heart of the kingdom, two burning eyes glowed in the dark — watching, waiting, always listening. She had ruled long enough to know when something was coming.</p>
+          <p>And today, something was indeed coming. A small visitor had arrived at the edge of the kingdom, curious and unafraid.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: THE GATE -->
+      <div class="book-slide">
+        <div class="slide-art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="bg4" cx="50%" cy="40%" r="60%">
+    <stop offset="0%" stop-color="#1a0a00"/>
+    <stop offset="100%" stop-color="#060402"/>
+  </radialGradient>
+  <radialGradient id="torchGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#ff8800" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="400" height="400" fill="url(#bg4)"/>
+<!-- Gate structure -->
+<rect x="100" y="80" width="20" height="260" fill="#2a1a08" rx="3"/>
+<rect x="280" y="80" width="20" height="260" fill="#2a1a08" rx="3"/>
+<!-- Gate arch -->
+<path d="M100,120 Q200,40 300,120" fill="none" stroke="#2a1a08" stroke-width="22"/>
+<path d="M100,120 Q200,50 300,120" fill="none" stroke="#3a2a12" stroke-width="8"/>
+<!-- Gate bars -->
+<rect x="130" y="130" width="10" height="200" fill="#1e1208" rx="2"/>
+<rect x="158" y="130" width="10" height="200" fill="#1e1208" rx="2"/>
+<rect x="186" y="130" width="10" height="200" fill="#1e1208" rx="2"/>
+<rect x="214" y="130" width="10" height="200" fill="#1e1208" rx="2"/>
+<rect x="242" y="130" width="10" height="200" fill="#1e1208" rx="2"/>
+<rect x="270" y="130" width="10" height="200" fill="#1e1208" rx="2"/>
+<!-- Horizontal bar -->
+<rect x="100" y="200" width="200" height="10" fill="#2a1a08" rx="2"/>
+<!-- Left torch -->
+<rect x="74" y="130" width="6" height="25" fill="#5a3a10"/>
+<ellipse cx="77" cy="125" rx="8" ry="5" fill="#ff8800"/>
+<ellipse cx="77" cy="110" rx="5" ry="15" fill="#ffcc00" opacity=".9"/>
+<ellipse cx="77" cy="105" rx="3" ry="10" fill="#fff" opacity=".7"/>
+<!-- Right torch -->
+<rect x="320" y="130" width="6" height="25" fill="#5a3a10"/>
+<ellipse cx="323" cy="125" rx="8" ry="5" fill="#ff8800"/>
+<ellipse cx="323" cy="110" rx="5" ry="15" fill="#ffcc00" opacity=".9"/>
+<ellipse cx="323" cy="105" rx="3" ry="10" fill="#fff" opacity=".7"/>
+<!-- Torch glow blobs -->
+<circle cx="77" cy="130" r="30" fill="url(#torchGlow)"/>
+<circle cx="323" cy="130" r="30" fill="url(#torchGlow)"/>
+<!-- Visitor blob shouting at gate -->
+<ellipse cx="200" cy="330" rx="40" ry="45" fill="#2d8a3e"/>
+<ellipse cx="200" cy="320" rx="34" ry="37" fill="#3aaa50"/>
+<ellipse cx="200" cy="302" rx="26" ry="24" fill="#4dc462"/>
+<!-- Blob face -->
+<ellipse cx="192" cy="298" rx="6" ry="7" fill="#fff"/>
+<ellipse cx="208" cy="298" rx="6" ry="7" fill="#fff"/>
+<circle cx="193" cy="300" r="3.5" fill="#111"/>
+<circle cx="209" cy="300" r="3.5" fill="#111"/>
+<circle cx="194" cy="298" r="1.5" fill="#fff"/>
+<circle cx="210" cy="298" r="1.5" fill="#fff"/>
+<!-- Open shouting mouth -->
+<ellipse cx="200" cy="313" rx="10" ry="7" fill="#1a1a1a"/>
+<ellipse cx="200" cy="311" rx="8" ry="4" fill="#8a0000"/>
+<!-- Sound waves -->
+<path d="M222,305 Q232,300 222,295" stroke="#d60000" stroke-width="2" fill="none" opacity=".7"/>
+<path d="M228,308 Q242,300 228,292" stroke="#d60000" stroke-width="2" fill="none" opacity=".5"/>
+<path d="M235,311 Q253,300 235,289" stroke="#d60000" stroke-width="1.5" fill="none" opacity=".3"/>
+</svg></div>
+        <div class="slide-text">
+          <div class="page-num">Page 3</div>
+          <h2>Open the Gates!</h2>
+          <p class="spoken">"OPEN THE GATES!"</p>
+          <p>A loud voice rang out — the kind of voice you'd make if you pinched your nose tight and then yelled as hard as you possibly could. It was strange and magnificent all at once.</p>
+          <p>The ancient iron gates had not been opened in a very long time. The whole kingdom held its breath.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: SOLDIERS -->
+      <div class="book-slide">
+        <div class="slide-art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="path5" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#1a0a2e"/>
+    <stop offset="100%" stop-color="#0a0510"/>
+  </linearGradient>
+</defs>
+<rect width="400" height="400" fill="url(#path5)"/>
+<!-- Cobblestone path down center -->
+<polygon points="160,400 240,400 280,180 120,180" fill="#1a1020"/>
+<line x1="200" y1="400" x2="200" y2="180" stroke="#2a1a35" stroke-width="2" opacity=".5"/>
+<line x1="160" y1="320" x2="240" y2="320" stroke="#2a1a35" stroke-width="1" opacity=".4"/>
+<line x1="148" y1="260" x2="252" y2="260" stroke="#2a1a35" stroke-width="1" opacity=".4"/>
+<line x1="136" y1="210" x2="264" y2="210" stroke="#2a1a35" stroke-width="1" opacity=".4"/>
+
+<!-- LEFT SIDE SOLDIERS (row of 4 blobs with spears) -->
+<!-- Soldier L1 closest -->
+<ellipse cx="100" cy="360" rx="25" ry="28" fill="#226b30"/>
+<ellipse cx="100" cy="348" rx="18" ry="18" fill="#2d8a3e"/>
+<circle cx="96" cy="345" r="4" fill="#fff" opacity=".9"/>
+<circle cx="104" cy="345" r="4" fill="#fff" opacity=".9"/>
+<circle cx="97" cy="346" r="2" fill="#111"/>
+<circle cx="105" cy="346" r="2" fill="#111"/>
+<line x1="120" y1="310" x2="120" y2="370" stroke="#5a3a10" stroke-width="3"/>
+<polygon points="120,305 115,318 125,318" fill="#aaa"/>
+<!-- Stripes on soldier -->
+<line x1="80" y1="355" x2="120" y2="355" stroke="#1a5a28" stroke-width="2" opacity=".6"/>
+<line x1="82" y1="365" x2="118" y2="365" stroke="#1a5a28" stroke-width="2" opacity=".6"/>
+
+<!-- Soldier L2 -->
+<ellipse cx="65" cy="320" rx="20" ry="22" fill="#226b30" opacity=".9"/>
+<ellipse cx="65" cy="310" rx="15" ry="15" fill="#2d8a3e"/>
+<circle cx="61" cy="307" r="3" fill="#fff" opacity=".9"/>
+<circle cx="69" cy="307" r="3" fill="#fff" opacity=".9"/>
+<circle cx="62" cy="308" r="1.5" fill="#111"/>
+<circle cx="70" cy="308" r="1.5" fill="#111"/>
+<line x1="82" y1="275" x2="82" y2="330" stroke="#5a3a10" stroke-width="2.5"/>
+<polygon points="82,271 78,282 86,282" fill="#aaa"/>
+
+<!-- Soldier L3 -->
+<ellipse cx="38" cy="285" rx="16" ry="18" fill="#226b30" opacity=".8"/>
+<ellipse cx="38" cy="276" rx="12" ry="12" fill="#2d8a3e"/>
+<circle cx="35" cy="274" r="2.5" fill="#fff" opacity=".9"/>
+<circle cx="41" cy="274" r="2.5" fill="#fff" opacity=".9"/>
+<line x1="53" y1="248" x2="53" y2="295" stroke="#5a3a10" stroke-width="2"/>
+<polygon points="53,244 50,255 56,255" fill="#aaa"/>
+
+<!-- Soldier L4 farthest -->
+<ellipse cx="18" cy="258" rx="12" ry="14" fill="#226b30" opacity=".6"/>
+<ellipse cx="18" cy="251" rx="9" ry="9" fill="#2d8a3e" opacity=".8"/>
+<line x1="30" y1="228" x2="30" y2="265" stroke="#5a3a10" stroke-width="1.5" opacity=".7"/>
+<polygon points="30,225 28,233 32,233" fill="#aaa" opacity=".7"/>
+
+<!-- RIGHT SIDE SOLDIERS (mirror) -->
+<ellipse cx="300" cy="360" rx="25" ry="28" fill="#226b30"/>
+<ellipse cx="300" cy="348" rx="18" ry="18" fill="#2d8a3e"/>
+<circle cx="296" cy="345" r="4" fill="#fff" opacity=".9"/>
+<circle cx="304" cy="345" r="4" fill="#fff" opacity=".9"/>
+<circle cx="297" cy="346" r="2" fill="#111"/>
+<circle cx="305" cy="346" r="2" fill="#111"/>
+<line x1="280" y1="310" x2="280" y2="370" stroke="#5a3a10" stroke-width="3"/>
+<polygon points="280,305 275,318 285,318" fill="#aaa"/>
+<line x1="280" y1="355" x2="320" y2="355" stroke="#1a5a28" stroke-width="2" opacity=".6"/>
+<line x1="282" y1="365" x2="318" y2="365" stroke="#1a5a28" stroke-width="2" opacity=".6"/>
+
+<ellipse cx="335" cy="320" rx="20" ry="22" fill="#226b30" opacity=".9"/>
+<ellipse cx="335" cy="310" rx="15" ry="15" fill="#2d8a3e"/>
+<circle cx="331" cy="307" r="3" fill="#fff" opacity=".9"/>
+<circle cx="339" cy="307" r="3" fill="#fff" opacity=".9"/>
+<circle cx="332" cy="308" r="1.5" fill="#111"/>
+<circle cx="340" cy="308" r="1.5" fill="#111"/>
+<line x1="318" y1="275" x2="318" y2="330" stroke="#5a3a10" stroke-width="2.5"/>
+<polygon points="318,271 314,282 322,282" fill="#aaa"/>
+
+<ellipse cx="362" cy="285" rx="16" ry="18" fill="#226b30" opacity=".8"/>
+<ellipse cx="362" cy="276" rx="12" ry="12" fill="#2d8a3e"/>
+<circle cx="359" cy="274" r="2.5" fill="#fff" opacity=".9"/>
+<circle cx="365" cy="274" r="2.5" fill="#fff" opacity=".9"/>
+<line x1="347" y1="248" x2="347" y2="295" stroke="#5a3a10" stroke-width="2"/>
+<polygon points="347,244 344,255 350,255" fill="#aaa"/>
+
+<ellipse cx="382" cy="258" rx="12" ry="14" fill="#226b30" opacity=".6"/>
+<ellipse cx="382" cy="251" rx="9" ry="9" fill="#2d8a3e" opacity=".8"/>
+<line x1="370" y1="228" x2="370" y2="265" stroke="#5a3a10" stroke-width="1.5" opacity=".7"/>
+<polygon points="370,225 368,233 372,233" fill="#aaa" opacity=".7"/>
+
+<!-- Queen on distant throne at top -->
+<rect x="155" y="90" width="90" height="80" fill="#1a0020" rx="4"/>
+<rect x="148" y="82" width="104" height="16" fill="#2a003a" rx="3"/>
+<!-- Queen on throne (small) -->
+<ellipse cx="200" cy="140" rx="28" ry="32" fill="#2d8a3e"/>
+<ellipse cx="200" cy="128" rx="18" ry="18" fill="#4dc462"/>
+<!-- Crown small -->
+<polygon points="188,105 193,115 200,107 207,115 212,105 215,125 185,125" fill="#d60000"/>
+<circle cx="200" cy="109" r="3" fill="#fff" opacity=".9"/>
+<!-- Red carpet -->
+<polygon points="175,160 225,160 240,400 160,400" fill="#5a0000" opacity=".4"/>
+</svg></div>
+        <div class="slide-text">
+          <div class="page-num">Page 4</div>
+          <h2>The Gates Opened</h2>
+          <p>With a groan like thunder, the great gates swung wide. Hundreds of soldiers lined every inch of the path — striped blobs in perfect rows, each one holding a spear that gleamed in the torchlight.</p>
+          <p>And there, at the far end of it all, sat the Booger Queen upon her throne. She did not move. She did not speak. She only watched.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 6: THE CREATOR -->
+      <div class="book-slide">
+        <div class="slide-art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="bg6" cx="50%" cy="30%" r="70%">
+    <stop offset="0%" stop-color="#0a1a0a"/>
+    <stop offset="100%" stop-color="#030808"/>
+  </radialGradient>
+  <radialGradient id="aura6" cx="50%" cy="35%" r="50%">
+    <stop offset="0%" stop-color="#4dc462" stop-opacity="0.3"/>
+    <stop offset="100%" stop-color="#4dc462" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="400" height="400" fill="url(#bg6)"/>
+<rect width="400" height="400" fill="url(#aura6)"/>
+<!-- Giant Queen face looming from above -->
+<!-- Big blob body top -->
+<ellipse cx="200" cy="60" rx="180" ry="130" fill="#2d8a3e"/>
+<ellipse cx="200" cy="50" rx="165" ry="115" fill="#3aaa50"/>
+<!-- Giant crown -->
+<polygon points="100,0 118,38 140,10 162,42 184,5 200,0 216,5 238,42 260,10 282,38 300,0 310,60 90,60" fill="#d60000"/>
+<polygon points="118,38 140,10 162,42" fill="#ff4040" opacity=".5"/>
+<polygon points="162,42 184,5 216,5 238,42" fill="#ff4040" opacity=".5"/>
+<polygon points="238,42 260,10 282,38" fill="#ff4040" opacity=".5"/>
+<circle cx="140" cy="12" r="6" fill="#ffcc00"/>
+<circle cx="184" cy="6" r="8" fill="#fff" opacity=".9"/>
+<circle cx="200" cy="2" r="7" fill="#ffcc00"/>
+<circle cx="216" cy="6" r="8" fill="#fff" opacity=".9"/>
+<circle cx="260" cy="12" r="6" fill="#ffcc00"/>
+<!-- Giant face -->
+<ellipse cx="200" cy="115" rx="120" ry="95" fill="#4dc462"/>
+<!-- Eyes - huge and expressive -->
+<ellipse cx="162" cy="98" rx="28" ry="30" fill="#fff"/>
+<ellipse cx="238" cy="98" rx="28" ry="30" fill="#fff"/>
+<circle cx="165" cy="101" r="17" fill="#111"/>
+<circle cx="241" cy="101" r="17" fill="#111"/>
+<circle cx="168" cy="95" r="7" fill="#fff"/>
+<circle cx="244" cy="95" r="7" fill="#fff"/>
+<!-- Iris detail -->
+<circle cx="162" cy="98" r="10" fill="#1a4a20" opacity=".6"/>
+<circle cx="238" cy="98" r="10" fill="#1a4a20" opacity=".6"/>
+<!-- Eyebrows raised -->
+<path d="M138,70 Q162,60 186,72" stroke="#1a5a28" stroke-width="5" fill="none" stroke-linecap="round"/>
+<path d="M214,72 Q238,60 262,70" stroke="#1a5a28" stroke-width="5" fill="none" stroke-linecap="round"/>
+<!-- Smile - big toothy -->
+<path d="M155,148 Q200,178 245,148" stroke="#1a5a28" stroke-width="4" fill="none" stroke-linecap="round"/>
+<ellipse cx="200" cy="158" rx="35" ry="14" fill="#fff" opacity=".9"/>
+<line x1="178" y1="148" x2="178" y2="172" stroke="#1a5a28" stroke-width="2"/>
+<line x1="190" y1="148" x2="190" y2="172" stroke="#1a5a28" stroke-width="2"/>
+<line x1="200" y1="148" x2="200" y2="172" stroke="#1a5a28" stroke-width="2"/>
+<line x1="210" y1="148" x2="210" y2="172" stroke="#1a5a28" stroke-width="2"/>
+<line x1="222" y1="148" x2="222" y2="172" stroke="#1a5a28" stroke-width="2"/>
+<!-- Booger drips -->
+<path d="M195,175 Q192,192 195,205" stroke="#5ae870" stroke-width="5" fill="none" stroke-linecap="round"/>
+<circle cx="195" cy="208" r="5" fill="#5ae870"/>
+<path d="M205,174 Q208,190 206,202" stroke="#5ae870" stroke-width="4" fill="none" stroke-linecap="round"/>
+<circle cx="206" cy="205" r="4" fill="#5ae870"/>
+<!-- Tiny soldiers below in awe -->
+<ellipse cx="60" cy="380" rx="12" ry="14" fill="#226b30"/>
+<ellipse cx="60" cy="370" rx="9" ry="10" fill="#2d8a3e"/>
+<circle cx="57" cy="368" r="2.5" fill="#fff" opacity=".9"/>
+<circle cx="63" cy="368" r="2.5" fill="#fff" opacity=".9"/>
+<ellipse cx="100" cy="385" rx="14" ry="16" fill="#226b30"/>
+<ellipse cx="100" cy="373" rx="10" ry="11" fill="#2d8a3e"/>
+<circle cx="97" cy="371" r="3" fill="#fff" opacity=".9"/>
+<circle cx="103" cy="371" r="3" fill="#fff" opacity=".9"/>
+<ellipse cx="145" cy="388" rx="16" ry="18" fill="#226b30"/>
+<ellipse cx="145" cy="374" rx="12" ry="13" fill="#2d8a3e"/>
+<ellipse cx="255" cy="388" rx="16" ry="18" fill="#226b30"/>
+<ellipse cx="255" cy="374" rx="12" ry="13" fill="#2d8a3e"/>
+<ellipse cx="300" cy="385" rx="14" ry="16" fill="#226b30"/>
+<ellipse cx="300" cy="373" rx="10" ry="11" fill="#2d8a3e"/>
+<ellipse cx="340" cy="380" rx="12" ry="14" fill="#226b30"/>
+<ellipse cx="340" cy="370" rx="9" ry="10" fill="#2d8a3e"/>
+<!-- Awe stars/sparkles around soldiers -->
+<text x="48" y="355" font-size="12" fill="#ffcc00" opacity=".7">★</text>
+<text x="88" y="358" font-size="10" fill="#ffcc00" opacity=".6">✦</text>
+<text x="328" y="355" font-size="12" fill="#ffcc00" opacity=".7">★</text>
+</svg></div>
+        <div class="slide-text">
+          <div class="page-num">Page 5</div>
+          <h2>Our Creator Is Here!</h2>
+          <p class="spoken">"Our creator is here! Our creator is HERE!"</p>
+          <p>One of the soldiers could not contain themselves. The shout spread like wildfire through the ranks, soldier to soldier, voice to voice, until the entire kingdom was trembling with the words.</p>
+          <p>The Queen rose to her full, impossible height. Her shadow fell across everything.</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 7: THE HOPE -->
+      <div class="book-slide">
+        <div class="slide-art"><svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <radialGradient id="bg7" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="#0f0a20"/>
+    <stop offset="100%" stop-color="#050308"/>
+  </radialGradient>
+  <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#d60000" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#d60000" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="400" height="400" fill="url(#bg7)"/>
+<rect width="400" height="400" fill="url(#centerGlow)"/>
+<!-- Stars/sparkles scattered -->
+<circle cx="30" cy="30" r="1.5" fill="#fff" opacity=".7"/>
+<circle cx="370" cy="40" r="1.5" fill="#fff" opacity=".6"/>
+<circle cx="50" cy="80" r="1" fill="#fff" opacity=".5"/>
+<circle cx="350" cy="70" r="1" fill="#fff" opacity=".5"/>
+<circle cx="380" cy="200" r="1.5" fill="#fff" opacity=".4"/>
+<circle cx="20" cy="200" r="1.5" fill="#fff" opacity=".4"/>
+<text x="355" y="30" font-size="12" fill="#ffcc00" opacity=".5">★</text>
+<text x="22" y="45" font-size="10" fill="#ffcc00" opacity=".4">✦</text>
+
+<!-- Orbiting blob creatures (swirling around queen) -->
+<!-- Orbit paths (faint rings) -->
+<ellipse cx="200" cy="200" rx="140" ry="80" fill="none" stroke="#2a1a3a" stroke-width="1" opacity=".4" stroke-dasharray="5,5"/>
+<ellipse cx="200" cy="200" rx="100" ry="55" fill="none" stroke="#2a1a3a" stroke-width="1" opacity=".3" stroke-dasharray="3,3"/>
+
+<!-- Small blobs orbiting -->
+<ellipse cx="65" cy="165" rx="16" ry="18" fill="#226b30"/>
+<ellipse cx="65" cy="156" rx="12" ry="12" fill="#2d8a3e"/>
+<circle cx="62" cy="154" r="3" fill="#fff" opacity=".9"/>
+<circle cx="68" cy="154" r="3" fill="#fff" opacity=".9"/>
+
+<ellipse cx="120" cy="100" rx="14" ry="16" fill="#1e5e2a"/>
+<ellipse cx="120" cy="92" rx="10" ry="10" fill="#2d8a3e"/>
+<circle cx="117" cy="90" r="2.5" fill="#fff" opacity=".9"/>
+<circle cx="123" cy="90" r="2.5" fill="#fff" opacity=".9"/>
+
+<ellipse cx="200" cy="80" rx="18" ry="20" fill="#226b30"/>
+<ellipse cx="200" cy="70" rx="13" ry="13" fill="#3aaa50"/>
+<circle cx="196" cy="68" r="3.5" fill="#fff" opacity=".9"/>
+<circle cx="204" cy="68" r="3.5" fill="#fff" opacity=".9"/>
+
+<ellipse cx="280" cy="95" rx="14" ry="16" fill="#1e5e2a"/>
+<ellipse cx="280" cy="87" rx="10" ry="10" fill="#2d8a3e"/>
+<circle cx="277" cy="85" r="2.5" fill="#fff" opacity=".9"/>
+<circle cx="283" cy="85" r="2.5" fill="#fff" opacity=".9"/>
+
+<ellipse cx="340" cy="158" rx="16" ry="18" fill="#226b30"/>
+<ellipse cx="340" cy="149" rx="12" ry="12" fill="#2d8a3e"/>
+<circle cx="337" cy="147" r="3" fill="#fff" opacity=".9"/>
+<circle cx="343" cy="147" r="3" fill="#fff" opacity=".9"/>
+
+<ellipse cx="345" cy="240" rx="15" ry="17" fill="#1e5e2a"/>
+<ellipse cx="345" cy="231" rx="11" ry="11" fill="#2d8a3e"/>
+<circle cx="342" cy="229" r="3" fill="#fff" opacity=".9"/>
+<circle cx="348" cy="229" r="3" fill="#fff" opacity=".9"/>
+
+<ellipse cx="280" cy="305" rx="14" ry="15" fill="#226b30"/>
+<ellipse cx="280" cy="297" rx="10" ry="10" fill="#3aaa50"/>
+<circle cx="277" cy="295" r="2.5" fill="#fff" opacity=".9"/>
+<circle cx="283" cy="295" r="2.5" fill="#fff" opacity=".9"/>
+
+<ellipse cx="120" cy="305" rx="14" ry="15" fill="#226b30"/>
+<ellipse cx="120" cy="297" rx="10" ry="10" fill="#3aaa50"/>
+<circle cx="117" cy="295" r="2.5" fill="#fff" opacity=".9"/>
+<circle cx="123" cy="295" r="2.5" fill="#fff" opacity=".9"/>
+
+<ellipse cx="55" cy="240" rx="16" ry="18" fill="#1e5e2a"/>
+<ellipse cx="55" cy="231" rx="12" ry="12" fill="#2d8a3e"/>
+<circle cx="52" cy="229" r="3" fill="#fff" opacity=".9"/>
+<circle cx="58" cy="229" r="3" fill="#fff" opacity=".9"/>
+
+<!-- CENTER: Queen - large, glowing, hopeful -->
+<ellipse cx="200" cy="225" rx="58" ry="65" fill="#2d8a3e"/>
+<ellipse cx="200" cy="215" rx="50" ry="55" fill="#3aaa50"/>
+<ellipse cx="200" cy="192" rx="36" ry="34" fill="#4dc462"/>
+<!-- Crown on queen -->
+<polygon points="180,162 188,178 200,165 212,178 220,162 225,186 175,186" fill="#d60000"/>
+<polygon points="188,178 200,165 212,178" fill="#ff4040" opacity=".6"/>
+<circle cx="200" cy="167" r="5" fill="#fff" opacity=".9"/>
+<circle cx="188" cy="177" r="3.5" fill="#ffcc00"/>
+<circle cx="212" cy="177" r="3.5" fill="#ffcc00"/>
+<!-- Queen face - hopeful expression -->
+<ellipse cx="190" cy="185" rx="8" ry="8.5" fill="#fff"/>
+<ellipse cx="210" cy="185" rx="8" ry="8.5" fill="#fff"/>
+<circle cx="191" cy="187" r="4.5" fill="#111"/>
+<circle cx="211" cy="187" r="4.5" fill="#111"/>
+<!-- Stars in eyes - hopeful! -->
+<circle cx="191" cy="185" r="2" fill="#fff"/>
+<circle cx="211" cy="185" r="2" fill="#fff"/>
+<text x="188" y="185" font-size="5" fill="#ffcc00">★</text>
+<text x="208" y="185" font-size="5" fill="#ffcc00">★</text>
+<!-- Nervous/hopeful smile -->
+<path d="M186,200 Q200,212 214,200" stroke="#1a5a28" stroke-width="3" fill="none" stroke-linecap="round"/>
+<!-- Crossed fingers / prayer hands hint -->
+<ellipse cx="165" cy="230" rx="14" ry="8" fill="#3aaa50" transform="rotate(-30,165,230)"/>
+<ellipse cx="235" cy="230" rx="14" ry="8" fill="#3aaa50" transform="rotate(30,235,230)"/>
+<!-- Sparkles of hope around queen -->
+<text x="150" y="175" font-size="14" fill="#ffcc00" opacity=".8">✦</text>
+<text x="238" y="172" font-size="12" fill="#ffcc00" opacity=".7">★</text>
+<text x="165" y="250" font-size="10" fill="#ff8800" opacity=".6">✦</text>
+<text x="228" y="248" font-size="10" fill="#ff8800" opacity=".6">✦</text>
+</svg></div>
+        <div class="slide-text">
+          <div class="page-num">Page 6</div>
+          <h2>Pick Me. Please.</h2>
+          <p>The Queen stepped forward and spoke in a voice like distant thunder wrapped in velvet:</p>
+          <p class="spoken">"May our creator choose any one of us — to lead a new and glorious path."</p>
+          <p>Every eye in the kingdom turned upward. Every blob stood still. And then, in the quietest whisper she had ever whispered, the Booger Queen added:</p>
+          <p class="spoken" style="color:#d60000;">"...I hope it's me."</p>
+        </div>
+      </div>
+
+    </div><!-- end track -->
+  </div><!-- end carousel-wrap -->
+
+  <!-- CONTROLS -->
+  <div class="carousel-controls">
+    <button class="carousel-btn" id="prevBtn" aria-label="Previous" disabled>&#8592;</button>
+    <div class="dots" id="dotContainer"></div>
+    <span class="slide-counter" id="slideCounter">1 / 7</span>
+    <button class="carousel-btn" id="nextBtn" aria-label="Next">&#8594;</button>
   </div>
-</div>
 
-<section class="book-content reveal-up">
-  <div class="book-spread">
-    <div class="book-image">COVER ART</div>
-    <div class="book-text">
-      <h3>FOR THE CHILDREN</h3>
-      <p>A self-published children's picture book from Los Angeles. Storytelling rooted in community, creativity, and the city.</p>
-      <a href="contact.html" class="btn-red btn-magnetic">INQUIRE</a>
-    </div>
-  </div>
-</section>
-
-<footer class="footer reveal-up">
+</main>
+<footer class="footer">
   <div class="footer-inner">
     <div class="footer-left">
       <div class="footer-logo">OBESECITY</div>
@@ -70,7 +699,78 @@
 </footer>
 
 <script>
-(function(){const dot=document.querySelector('.cursor-dot');const ring=document.querySelector('.cursor-ring');if(window.matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';});document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));});}const nav=document.getElementById('mainNav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60);});document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});},{threshold:0.12});document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));const overlay=document.querySelector('.page-transition-overlay');document.querySelectorAll('a[href]').forEach(link=>{const href=link.getAttribute('href');if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){link.addEventListener('click',e=>{e.preventDefault();overlay.classList.add('active');setTimeout(()=>{window.location.href=href;},400);});}});setTimeout(()=>overlay.classList.remove('active'),100);document.querySelectorAll('.btn-magnetic').forEach(btn=>{btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';});btn.addEventListener('mouseleave',()=>{btn.style.transform='';});});})();
+(function(){
+  // Cursor
+  const dot=document.querySelector('.cursor-dot');
+  const ring=document.querySelector('.cursor-ring');
+  if(window.matchMedia('(pointer:fine)').matches){
+    document.addEventListener('mousemove',e=>{
+      dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
+      ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';
+    });
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));
+      el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));
+    });
+  }
+  // Nav scroll
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));
+  document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));
+  // Page transitions
+  const overlay=document.querySelector('.page-transition-overlay');
+  document.querySelectorAll('a[href]').forEach(link=>{
+    const href=link.getAttribute('href');
+    if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){
+      link.addEventListener('click',e=>{
+        e.preventDefault();
+        overlay.classList.add('active');
+        setTimeout(()=>window.location.href=href,400);
+      });
+    }
+  });
+  setTimeout(()=>overlay.classList.remove('active'),100);
+  // Carousel
+  const track=document.getElementById('carouselTrack');
+  const slides=track.children;
+  const total=slides.length;
+  const counter=document.getElementById('slideCounter');
+  const prevBtn=document.getElementById('prevBtn');
+  const nextBtn=document.getElementById('nextBtn');
+  const dotContainer=document.getElementById('dotContainer');
+  let current=0;
+  // Build dots
+  for(let i=0;i<total;i++){
+    const d=document.createElement('button');
+    d.className='dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Go to slide '+(i+1));
+    d.addEventListener('click',()=>goTo(i));
+    dotContainer.appendChild(d);
+  }
+  function goTo(n){
+    current=Math.max(0,Math.min(n,total-1));
+    track.style.transform='translateX(-'+current+'00%)';
+    counter.textContent=(current+1)+' / '+total;
+    prevBtn.disabled=current===0;
+    nextBtn.disabled=current===total-1;
+    dotContainer.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===current));
+  }
+  prevBtn.addEventListener('click',()=>goTo(current-1));
+  nextBtn.addEventListener('click',()=>goTo(current+1));
+  // Keyboard nav
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown')goTo(current+1);
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp')goTo(current-1);
+  });
+  // Touch swipe
+  let startX=0;
+  track.addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+  track.addEventListener('touchend',e=>{
+    const dx=e.changedTouches[0].clientX-startX;
+    if(Math.abs(dx)>40){dx<0?goTo(current+1):goTo(current-1);}
+  });
+})();
 </script>
 </body>
-</html>
+  </html>
