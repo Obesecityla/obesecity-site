@@ -6,6 +6,74 @@
 <title>Photography — OBESECITY</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: #1a1a1a;
+  margin: 0;
+}
+.project-card {
+  background: #0a0a0a;
+  padding: clamp(32px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 280px;
+  justify-content: space-between;
+  cursor: default;
+  transition: background .3s;
+  position: relative;
+  overflow: hidden;
+}
+.project-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 2px;
+  background: #d60000;
+  transition: width .4s ease;
+}
+.project-card:hover { background: #111; }
+.project-card:hover::after { width: 100%; }
+.project-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  letter-spacing: .3em;
+  color: #d60000;
+  text-transform: uppercase;
+}
+.project-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.1;
+  margin: 0;
+}
+.project-desc {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .8rem;
+  color: #555;
+  line-height: 1.6;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.project-status {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  color: #333;
+  text-transform: uppercase;
+  align-self: flex-end;
+}
+.project-status.active { color: #d60000; }
+@media (max-width: 640px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 <div class="page-transition-overlay"></div>
@@ -28,37 +96,91 @@
 </div>
 
 <section class="page-hero reveal-up">
-  <div class="page-hero-label">VISUAL WORK</div>
-  <h1 class="page-hero-title">PHOTO<br><span class="red">GRAPHY</span></h1>
-  <p class="page-hero-meta">Street &nbsp;&middot;&nbsp; Portrait &nbsp;&middot;&nbsp; Documentary &nbsp;&middot;&nbsp; Los Angeles</p>
+  <div class="page-hero-label">Visual Work</div>
+  <h1 class="page-hero-title">PHOTO<br><span class="red">PROJECTS</span></h1>
+  <p class="page-hero-meta">Street &nbsp;&middot;&nbsp; Documentary &nbsp;&middot;&nbsp; Los Angeles</p>
 </section>
 
 <div class="ticker-wrap">
   <div class="ticker-strip">
-    <span>STREET &nbsp;&#8212;&nbsp; PORTRAIT &nbsp;&#8212;&nbsp; DOCUMENTARY &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; FILM &nbsp;&#8212;&nbsp; DIGITAL &nbsp;&#8212;&nbsp; BLACK AND WHITE &nbsp;&#8212;&nbsp; </span>
-    <span>STREET &nbsp;&#8212;&nbsp; PORTRAIT &nbsp;&#8212;&nbsp; DOCUMENTARY &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; FILM &nbsp;&#8212;&nbsp; DIGITAL &nbsp;&#8212;&nbsp; BLACK AND WHITE &nbsp;&#8212;&nbsp; </span>
+    <span>ONGOING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; STREET &nbsp;&#8212;&nbsp; DOCUMENTARY &nbsp;&#8212;&nbsp; PORTRAIT &nbsp;&#8212;&nbsp; FILM &nbsp;&#8212;&nbsp; DIGITAL &nbsp;&#8212;&nbsp; </span>
+    <span>ONGOING &nbsp;&#8212;&nbsp; LOS ANGELES &nbsp;&#8212;&nbsp; STREET &nbsp;&#8212;&nbsp; DOCUMENTARY &nbsp;&#8212;&nbsp; PORTRAIT &nbsp;&#8212;&nbsp; FILM &nbsp;&#8212;&nbsp; DIGITAL &nbsp;&#8212;&nbsp; </span>
   </div>
 </div>
 
-<section class="section reveal-up" style="padding:4rem 2rem;">
-  <h2 class="section-title">THE WORK</h2>
-  <div class="red-rule"></div>
-  <div class="photo-grid">
-    <div class="photo-cell reveal-up"><div class="photo-cell-label">STREET</div></div>
-    <div class="photo-cell reveal-up"><div class="photo-cell-label">PORTRAIT</div></div>
-    <div class="photo-cell reveal-up"><div class="photo-cell-label">DOCUMENTARY</div></div>
-    <div class="photo-cell reveal-up"><div class="photo-cell-label">LOS ANGELES</div></div>
-    <div class="photo-cell reveal-up"><div class="photo-cell-label">PEOPLE</div></div>
-    <div class="photo-cell reveal-up"><div class="photo-cell-label">PLACES</div></div>
-  </div>
-</section>
+<div class="projects-grid">
 
-<section class="sync-section reveal-up">
-  <h2 class="section-title">AVAILABLE FOR HIRE</h2>
-  <div class="red-rule"></div>
-  <p class="sync-body">Street photography, editorial portraits, and documentary work. Available for commercial and personal projects in Los Angeles and beyond.</p>
-  <a href="contact.html" class="btn-red btn-magnetic">BOOK A SHOOT</a>
-</section>
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 01</div>
+    <h2 class="project-title">DON'T WALK</h2>
+    <p class="project-desc">Crosswalk studies — strangers mid-stride, caught between signals. The city in transit.</p>
+    <span class="project-status active">— Ongoing</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 02</div>
+    <h2 class="project-title">SPIN CYCLE</h2>
+    <p class="project-desc">Laundromats as living rooms. The intimacy of public washing — waiting, folding, staring at machines.</p>
+    <span class="project-status">— Compiling</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 03</div>
+    <h2 class="project-title">CORNER STORE</h2>
+    <p class="project-desc">Liquor store fronts, signage, and the people who orbit them. Every block has one. Every one has a story.</p>
+    <span class="project-status">— Compiling</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 04</div>
+    <h2 class="project-title">BUS BENCH</h2>
+    <p class="project-desc">Portraits of people waiting — at bus stops, on curbs, outside offices. Stillness in a city that never stops.</p>
+    <span class="project-status active">— Ongoing</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 05</div>
+    <h2 class="project-title">OPEN LATE</h2>
+    <p class="project-desc">24-hour spots — diners, gas stations, swap meets at dawn. The Los Angeles that exists after midnight.</p>
+    <span class="project-status">— Compiling</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 06</div>
+    <h2 class="project-title">HAND PAINTED</h2>
+    <p class="project-desc">Murals, signs, and storefronts lettered by hand. A survey of painted text across LA neighborhoods.</p>
+    <span class="project-status active">— Ongoing</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 07</div>
+    <h2 class="project-title">SOMEBODY'S YARD</h2>
+    <p class="project-desc">Front yards, chain link, lawn chairs, garden shrines. The private made public — home as self-portrait.</p>
+    <span class="project-status">— Compiling</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 08</div>
+    <h2 class="project-title">CHURCH CLOTHES</h2>
+    <p class="project-desc">Sunday portraits outside places of worship. Dressed up, standing still, before and after the sermon.</p>
+    <span class="project-status">— Compiling</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 09</div>
+    <h2 class="project-title">FREEWAY LIGHT</h2>
+    <p class="project-desc">The underside of Los Angeles — overpasses, on-ramps, and the communities living in their shadow.</p>
+    <span class="project-status active">— Ongoing</span>
+  </div>
+
+  <div class="project-card reveal-up">
+    <div class="project-num">Project 10</div>
+    <h2 class="project-title">FOR SALE BY OWNER</h2>
+    <p class="project-desc">Hand-written signs, flyers, and notices. A city communicating with itself through paper and tape.</p>
+    <span class="project-status">— Compiling</span>
+  </div>
+
+</div>
 
 <footer class="footer reveal-up">
   <div class="footer-inner">
@@ -77,44 +199,35 @@
 
 <script>
 (function(){
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
-  if (window.matchMedia('(pointer:fine)').matches) {
-    document.addEventListener('mousemove', e => {
-      dot.style.transform = 'translate(' + e.clientX + 'px,' + e.clientY + 'px)';
-      ring.style.transform = 'translate(' + (e.clientX-12) + 'px,' + (e.clientY-12) + 'px)';
+  const dot=document.querySelector('.cursor-dot');
+  const ring=document.querySelector('.cursor-ring');
+  if(window.matchMedia('(pointer:fine)').matches){
+    document.addEventListener('mousemove',e=>{
+      dot.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
+      ring.style.transform='translate('+(e.clientX-12)+'px,'+(e.clientY-12)+'px)';
     });
-    document.querySelectorAll('a,button').forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
+    document.querySelectorAll('a,button').forEach(el=>{
+      el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));
+      el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));
     });
   }
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 60); });
-  document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
-  document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal-up, .reveal-left').forEach(el => observer.observe(el));
-  const overlay = document.querySelector('.page-transition-overlay');
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href && !href.startsWith('http') && !href.startsWith('mailto') && !href.startsWith('#')) {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        overlay.classList.add('active');
-        setTimeout(() => { window.location.href = href; }, 400);
-      });
+  const nav=document.getElementById('mainNav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));
+  document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');obs.unobserve(e.target);}});},{threshold:0.12});
+  document.querySelectorAll('.reveal-up,.reveal-left').forEach(el=>obs.observe(el));
+  const overlay=document.querySelector('.page-transition-overlay');
+  document.querySelectorAll('a[href]').forEach(link=>{
+    const href=link.getAttribute('href');
+    if(href&&!href.startsWith('http')&&!href.startsWith('mailto')&&!href.startsWith('#')){
+      link.addEventListener('click',e=>{e.preventDefault();overlay.classList.add('active');setTimeout(()=>{window.location.href=href;},400);});
     }
   });
-  setTimeout(() => overlay.classList.remove('active'), 100);
-  document.querySelectorAll('.btn-magnetic').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
-      const r = btn.getBoundingClientRect();
-      btn.style.transform = 'translate(' + (e.clientX-r.left-r.width/2)*.25 + 'px,' + (e.clientY-r.top-r.height/2)*.25 + 'px)';
-    });
-    btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+  setTimeout(()=>overlay.classList.remove('active'),100);
+  document.querySelectorAll('.btn-magnetic').forEach(btn=>{
+    btn.addEventListener('mousemove',e=>{const r=btn.getBoundingClientRect();btn.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.25+'px)';});
+    btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
   });
 })();
 </script>
